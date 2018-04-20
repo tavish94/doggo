@@ -23,6 +23,7 @@ header {
 	height: 8%;
 	background-color: var(--heading-color);
 	border-bottom: 1px solid #353635;
+	position: relative;
 }
 
 .prof_img {
@@ -103,10 +104,41 @@ header {
 	border-radius: 40px;
 	border-color: silver;
 	color: var(--heading-color);
+	position: absolute;
+	right: 10px;	
 }
 .card-header {
 	display: flex;
 }
+
+.dropdown {
+	position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+.icons {
+	background-color: transparent !important;
+	background-size: cover;
+	background-position: center;
+	border: none !important; 
+	height: 30px;
+	width: 30px;
+	top: -50px;
+	position: absolute;
+}
+#settings {
+	background-image: url("../images/gear.png");
+	filter: invert(100%);
+	right: 15px;
+}
+#profile {
+	background-image: url("../images/profile.png");
+	right: 60px;
+}
+
 /* More info */
 .intro {
 	background-color: #FFFFFF;
