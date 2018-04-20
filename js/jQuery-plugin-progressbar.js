@@ -18,8 +18,11 @@
 			duration: $target.data('duration') ? $target.data('duration') : DEFAULTS.duration
 			};
 			// console.log(opts);
+
+			var mileage = "3/4 miles";
 	
-			$target.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + opts.percent + '%</span></div>');
+			// $target.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + opts.percent + '%</span></div>');
+			$target.append('<div class="background"></div><div class="rotate"></div><div class="left"></div><div class="right"></div><div class=""><span>' + mileage + '</span></div>');
 	
 			$target.find('.background').css('background-color', opts.backgroundColor);
 			$target.find('.left').css('background-color', opts.backgroundColor);

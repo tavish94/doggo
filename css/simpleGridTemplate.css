@@ -30,16 +30,32 @@ header {
 }
 .todo {	
 }
-#walks {
-	position: relative;
+.jobs {
 	height: 200px;
+	margin: 0 auto; 
+	position: relative;
+	justify-content: center;
+}
+#feeding {
+	margin-left: 10px;
+	display: inline;
 	text-align: center;
-	align-items: center;
-	/*display: inline-flex;*/
+}
+#bowls {
+	padding: 15px;,
+}
+#walk-prog {
+	margin-left: 35px;
 }
 #walk-deets {
 	position: absolute;
+	margin-left: 40px;
 	bottom: 0;
+}
+
+.fed {
+	/*background-color: #f239df;*/
+	/*filter: hue-rotate(180deg);*/
 }
 
 
