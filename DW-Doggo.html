@@ -8,13 +8,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/simpleGridTemplate.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-4.0.0.css">
+  <link rel="stylesheet" type="text/css" href="css/jQuery-plugin-progressbar.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/jQuery-plugin-progressbar.js"></script>
+
 </head>
 
 <body>
@@ -51,11 +53,85 @@
   </section>
   <!-- Stats Gallery Section -->
   <div class="gallery">
+    <!-- TODO CARD -->
     <div class="thumbnail todo">
       <div class="card">
         <div class="card-header">
           <h4>To Do</h4>
-          <button class="add ml-auto">+</button>
+          <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
+
+          <!-- Modal -->
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add To Do</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the modal.</p>
+<!--                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Walk</a></li>
+                      <li><a href="#">Feed</a></li>
+                      <li><a href="#">Health</a></li>
+                    </ul>
+                      </div> -->
+                  <select class="form-control form-control-lg">
+                    <option>Walk</option>
+                    <option>Feed</option>
+                    <option>Health</option>
+                  </select>
+                  <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                      <input type='text' class="form-control" />
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    $(function () {
+                      $('#datetimepicker1').datetimepicker();
+                    });
+                  </script>
+                  <div class="checkbox">
+                    <label class="checkbox-inline"><input type="checkbox"> M</label>
+                    <label class="checkbox-inline"><input type="checkbox"> T</label>
+                    <label class="checkbox-inline"><input type="checkbox"> W</label>
+                    <label class="checkbox-inline"><input type="checkbox"> TR</label>
+                    <label class="checkbox-inline"><input type="checkbox"> F</label>
+                    <label class="checkbox-inline"><input type="checkbox"> S</label>
+                    <label class="checkbox-inline"><input type="checkbox"> S</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="sel1">Reminder:</label>
+                    <select class="form-control" id="sel1">
+                      <option>1</option>
+                      <option>5</option>
+                      <option>10</option>
+                      <option>15</option>
+                      <option>30</option>
+                      <option>45</option>
+                    </select>
+                    <select class="form-control" id="sel1">
+                      <option>minutes</option>
+                      <option>hours</option>
+                      <option>days</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
         <div class="list-group"> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -75,15 +151,27 @@
       </div>
     </div>
     
+    <!-- WALKS CARD -->
     <div class="thumbnail">
   		<div class="card-header"> 
        <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
   			<h4>Walks</h4>
   			<button class="add ml-auto">+</button>
   		</div>
-      <img src="images/walks.png" alt="" width="373" class="cards"/> 
+      <div class="card-body" id="walks">
+        <!-- <img src="images/walks.png"  width="223px"/>  -->
+        <div class="progress-bar" data-percent="66" id="walk-prog"></div>
+        
+        <script type="text/javascript">
+          $(".progress-bar").loading();
+        </script>
+
+        <h5 id="walk-deets">2 walks taken today</h5>
+      </div>
+      
     </div>
 
+    <!-- FEEDING CARD -->
     <div class="thumbnail">
       <div class="card-header">
   			<h4>Feeding</h4>
@@ -92,6 +180,7 @@
       <img src="images/feeding.png" alt="" width="415" class="cards"/> 
     </div>
 
+    <!-- HEALTH CARD -->
     <div class="thumbnail">
       <div class="card-header">
   			<h4>Health</h4>
@@ -104,6 +193,7 @@
       </ul>
     </div>
 
+    <!-- LEADERBOARD CARD -->
     <div class="thumbnail">
       <div class="card-header">
   			<h4>Leaderboard</h4>

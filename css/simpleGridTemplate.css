@@ -23,7 +23,6 @@ header {
 	height: 8%;
 	background-color: var(--heading-color);
 	border-bottom: 1px solid #353635;
-	position: relative;
 }
 
 .prof_img {
@@ -31,6 +30,18 @@ header {
 }
 .todo {	
 }
+#walks {
+	position: relative;
+	height: 200px;
+	text-align: center;
+	align-items: center;
+	/*display: inline-flex;*/
+}
+#walk-deets {
+	position: absolute;
+	bottom: 0;
+}
+
 
 .logo {
 	color: #fff;
@@ -104,8 +115,6 @@ header {
 	border-radius: 40px;
 	border-color: silver;
 	color: var(--heading-color);
-	position: absolute;
-	right: 10px;	
 }
 .card-header {
 	display: flex;
