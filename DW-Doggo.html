@@ -12,9 +12,15 @@
   <link rel="stylesheet" type="text/css" href="css/simpleGridTemplate.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-4.0.0.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css">
   
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- moment.js must be loaded first -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
+
+  <!-- bootstrap-datetimepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 </head>
 
 <body>
@@ -53,17 +59,17 @@
                   <h4 class="modal-title">Add To Do</h4>
                 </div>
                 <div class="modal-body">
-                  <p>Some text in the modal.</p>
-<!--                  <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Walk</a></li>
-                      <li><a href="#">Feed</a></li>
-                      <li><a href="#">Health</a></li>
-                    </ul>
-                      </div> -->
-                  <select class="form-control form-control-lg">
+                  <p></p>
+                  <form class="form-group">
+                    <label for="sel1">Assign to: </label>
+                    <select class="form-group" class="form-control form-control-lg">
+                      <option>Helen</option>
+                      <option>Tavish</option>
+                      <option>Anna</option>
+                      <option>Nikki</option>
+                  </select>
+                  </form>
+                  <select class="form-group" class="form-control form-control-lg">
                     <option>Walk</option>
                     <option>Feed</option>
                     <option>Health</option>
@@ -76,6 +82,7 @@
                     </div>
                   </div>
                   <script type="text/javascript">
+                    console.log("IT WORKED");
                     $(function () {
                       $('#datetimepicker1').datetimepicker();
                     });
@@ -91,19 +98,25 @@
                   </div>
                   <div class="form-group">
                     <label for="sel1">Reminder:</label>
-                    <select class="form-control" id="sel1">
-                      <option>1</option>
-                      <option>5</option>
-                      <option>10</option>
-                      <option>15</option>
-                      <option>30</option>
-                      <option>45</option>
-                    </select>
-                    <select class="form-control" id="sel1">
-                      <option>minutes</option>
-                      <option>hours</option>
-                      <option>days</option>
-                    </select>
+                    <form class="form-inline">
+                      <select class="form-control" id="sel1">
+                        <option>1</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                      </select>
+                      <select class="form-control" id="sel1">
+                        <option>minutes</option>
+                        <option>hours</option>
+                        <option>days</option>
+                      </select>
+                    </form>
+                    <div class="form-group">
+                      <label for="usr">Notes:</label>
+                      <input type="text" class="form-control" id="usr">
+                    </div>
                   </div>
                 </div>
                 <div class="modal-footer">
