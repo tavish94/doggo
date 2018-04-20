@@ -34,7 +34,7 @@
       <button class="btn btn-primary icons" type="button" id="settings" data-toggle="dropdown"><span class="no-caret"></span></button>
       <ul role="menu" class="dropdown-menu dropdown-menu-right">
         <li><a href="#">Add Family Member</a></li>
-        <li><a href="#settings">Preferences</a></li>
+        <li><a href="settings">Preferences</a></li>
         <li><a href="#">Log Out</a></li>
       </ul>
     </div>
@@ -52,7 +52,7 @@
   <!-- Stats Gallery Section -->
   <div class="gallery">
     <div class="thumbnail todo">
-<!--      <div class="card">-->
+      <div class="card">
         <div class="card-header">
           <h4>To Do</h4>
           <button class="add ml-auto">+</button>
@@ -72,36 +72,43 @@
             <small>1 day ago</small> </div>
           <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
           </a> </div>
-<!--      </div>-->
+      </div>
     </div>
+    
     <div class="thumbnail">
-		<div class="card-header">
-			<h4>Walks</h4>
-			<button class="add ml-auto">+</button>
-		</div>
-      <img src="images/walks.png" alt="" width="373" class="cards"/> </div>
-    <div class="thumbnail">
-      <div class="card-header">
-			<h4>Feeding</h4>
-			<button class="add ml-auto">+</button>
-		</div>
-      <img src="images/feeding.png" alt="" width="415" class="cards"/> </div>
+  		<div class="card-header"> 
+       <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
+  			<h4>Walks</h4>
+  			<button class="add ml-auto">+</button>
+  		</div>
+      <img src="images/walks.png" alt="" width="373" class="cards"/> 
+    </div>
+
     <div class="thumbnail">
       <div class="card-header">
-			<h4>Health</h4>
-			<button class="add ml-auto">+</button>
-		</div>
+  			<h4>Feeding</h4>
+  			<button class="add ml-auto">+</button>
+    	</div>
+      <img src="images/feeding.png" alt="" width="415" class="cards"/> 
+    </div>
+
+    <div class="thumbnail">
+      <div class="card-header">
+  			<h4>Health</h4>
+  			<button class="add ml-auto">+</button>
+  		</div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Vet Visit 03/24/18</li>
         <li class="list-group-item">Heartworm Medication 04/01/18</li>
         <li class="list-group-item">Groomer's Appointment 04/05/18</li>
       </ul>
     </div>
+
     <div class="thumbnail">
       <div class="card-header">
-			<h4>Leaderboard</h4>
-			<button class="add ml-auto">+</button>
-		</div>
+  			<h4>Leaderboard</h4>
+  			<button class="add ml-auto">+</button>
+  		</div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Tavish <span class="badge badge-primary badge-pill">14</span></li>
         <li class="list-group-item">Anna<span class="badge badge-primary badge-pill">10</span></li>
@@ -110,6 +117,7 @@
       </ul>
     </div>
   </div>
+
   <!-- Footer Section -->
   <footer id="contact"> </footer>
   <!-- Copyrights Section -->
