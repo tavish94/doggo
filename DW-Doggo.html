@@ -8,19 +8,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/simpleGridTemplate.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-4.0.0.css">
+  <link rel="stylesheet" type="text/css" href="css/jQuery-plugin-progressbar.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css">
   
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- moment.js must be loaded first -->
+  <script src="js/jQuery-plugin-progressbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
-
-  <!-- bootstrap-datetimepicker -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  
 </head>
 
 <body>
@@ -29,6 +28,21 @@
   <!-- Header -->
   <header class="header">
     <h4 class="logo">DOGGO</h4>
+    <div class="dropdown">
+      <button class="btn btn-primary icons" type="button" id="profile" data-toggle="dropdown"><span class="no-caret"></span></button>
+      <ul role="menu" class="dropdown-menu dropdown-menu-right">
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-primary icons" type="button" id="settings" data-toggle="dropdown"><span class="no-caret"></span></button>
+      <ul role="menu" class="dropdown-menu dropdown-menu-right">
+        <li><a href="#">Add Family Member</a></li>
+        <li><a href="settings">Preferences</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
   </header>
   <!-- Hero Section -->
   <section class="intro">
@@ -42,8 +56,9 @@
   </section>
   <!-- Stats Gallery Section -->
   <div class="gallery">
+    <!-- TODO CARD -->
     <div class="thumbnail todo">
-<!--      <div class="card">-->
+      <!-- <div class="card"> -->
         <div class="card-header">
           <h4>To Do</h4>
           <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
@@ -154,36 +169,65 @@
             <small>1 day ago</small> </div>
           <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
           </a> </div>
-<!--      </div>-->
+      <!-- </div> -->
     </div>
+    
+    <!-- WALKS CARD -->
     <div class="thumbnail">
-		<div class="card-header">
-			<h4>Walks</h4>
-			<button class="add ml-auto">+</button>
-		</div>
-      <img src="images/walks.png" alt="" width="373" class="cards"/> </div>
+  		<div class="card-header"> 
+       <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
+  			<h4>Walks</h4>
+  			<button class="add ml-auto">+</button>
+  		</div>
+      <div class="card-body jobs">
+        <!-- <img src="images/walks.png"  width="223px"/>  -->
+        <div class="progress-bar" data-percent="75" id="walk-prog"></div>
+        
+        <script type="text/javascript">
+          $(".progress-bar").loading();
+        </script>
+
+        <h5 id="walk-deets">2 walks taken today</h5>
+      </div>
+      
+    </div>
+
+    <!-- FEEDING CARD -->
     <div class="thumbnail">
       <div class="card-header">
-			<h4>Feeding</h4>
-			<button class="add ml-auto">+</button>
-		</div>
-      <img src="images/feeding.png" alt="" width="415" class="cards"/> </div>
+  			<h4>Feeding</h4>
+  			<button class="add ml-auto">+</button>
+    	</div>
+      <div class="card-body jobs">
+        <div id="feeding">
+          <img src="images/bowl.png" class="fed" id="bowls" width="100px"/> 
+          <img src="images/bowl.png" id="bowls" width="100px"/> 
+        </div>
+        <div id="feeding">
+          <h5>8am Helen &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 5pm Niki</h5> 
+        </div> 
+      </div>
+    </div>
+
+    <!-- HEALTH CARD -->`
     <div class="thumbnail">
       <div class="card-header">
-			<h4>Health</h4>
-			<button class="add ml-auto">+</button>
-		</div>
+  			<h4>Health</h4>
+  			<button class="add ml-auto">+</button>
+  		</div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Vet Visit 03/24/18</li>
         <li class="list-group-item">Heartworm Medication 04/01/18</li>
         <li class="list-group-item">Groomer's Appointment 04/05/18</li>
       </ul>
     </div>
+
+    <!-- LEADERBOARD CARD -->
     <div class="thumbnail">
       <div class="card-header">
-			<h4>Leaderboard</h4>
-			<button class="add ml-auto">+</button>
-		</div>
+  			<h4>Leaderboard</h4>
+  			<button class="add ml-auto">+</button>
+  		</div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Tavish <span class="badge badge-primary badge-pill">14</span></li>
         <li class="list-group-item">Anna<span class="badge badge-primary badge-pill">10</span></li>
@@ -192,6 +236,7 @@
       </ul>
     </div>
   </div>
+
   <!-- Footer Section -->
   <footer id="contact"> </footer>
   <!-- Copyrights Section -->
