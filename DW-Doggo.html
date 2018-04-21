@@ -67,12 +67,18 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Add To Do</h4>
+                  <h3 class="modal-title">Add Chore</h3>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                   <form class="form-group">
-                  <label for="sel1">Assign to: </label>
+                  <label>Assign: </label>
+                  <select id="eventType" class="form-group form-control form-control-lg">
+                    <option>Walk</option>
+                    <option>Feed</option>
+                    <option>Health</option>
+                  </select>
+                  <label>To: </label>
                     <select class="form-group form-control form-control-lg">
                       <option>Helen</option>
                       <option>Tavish</option>
@@ -80,11 +86,7 @@
                       <option>Nikki</option>
                     </select>
                   </form>
-                  <select id="eventType" class="form-group form-control form-control-lg">
-                    <option>Walk</option>
-                    <option>Feed</option>
-                    <option>Health</option>
-                  </select>
+                  <label>For: </label>
                   <div class="form-group">
                     <div class="input-group date" id="datetimepicker1">
                       <input type="text" class="form-control" />
@@ -103,10 +105,10 @@
                       <label class="checkbox-inline"><input type="checkbox"> M</label>
                       <label class="checkbox-inline"><input type="checkbox"> T</label>
                       <label class="checkbox-inline"><input type="checkbox"> W</label>
-                      <label class="checkbox-inline"><input type="checkbox"> TR</label>
+                      <label class="checkbox-inline"><input type="checkbox"> R</label>
                       <label class="checkbox-inline"><input type="checkbox"> F</label>
                       <label class="checkbox-inline"><input type="checkbox"> S</label>
-                      <label class="checkbox-inline"><input type="checkbox"> SU</label>
+                      <label class="checkbox-inline"><input type="checkbox"> U</label>
                     </div>
                   </form>
                   <div class="form-group">
@@ -140,6 +142,7 @@
             </div>
           </div>
         </div>
+
         <div class="list-group" id="toDoList"> 
           <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
             <div class="task-wrap">
@@ -177,29 +180,70 @@
             </div>
           </a> 
         </div>
-       </div> 
+      </div>
+      <!-- </div> -->
     </div>
-	<div class="col-lg-3">
-		<!-- WALKS CARD -->
-		<div class="thumbnail">
-				<div class="card-header"> 
-			   <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
-					<h4>Walks</h4>
-					<button class="add ml-auto">+</button>
-				</div>
-			  <div class="card-body jobs">
-				<!-- <img src="images/walks.png"  width="223px"/>  -->
-				<div class="progress-bar" data-percent="75" id="walk-prog"></div>
 
-				<script type="text/javascript">
-				  $(".progress-bar").loading();
-				</script>
+    <div class="col-md-3">
+    <!-- WALKS CARD -->
+    <div class="thumbnail">
+  		<div class="card-header">
+  			<h4>Walks</h4>
+  			<button class="add ml-auto" data-toggle="modal" data-target="#dataModal">View Stats</button>
 
-				<h5 id="walk-deets">2 walks taken today</h5>
-			  </div>
+        <!-- Data Modal -->
+        <div id="dataModal" class="modal fade" role="dialog">
+          <div class="modal-dialog" style="width:90%; max-width: 1100px;">
+            <div class="modal-content">
 
-			</div>
-		
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <div class="modal-body">
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Daily Walk Total</h4>
+                  </div> 
+                  <div class="card-body jobs">
+                    <div class="progress-bar" data-percent="75" id="modal-walk-prog"></div>
+                  </div>
+                  <div id="modal-walk-deets"> <h5>2 walks taken today</h5> </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Walks This Week</h4>
+                  </div>
+                  <img src="images/miles_week.png" class="graph_img"/>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Walks This Month</h4>
+                  </div>
+                  <img src="images/miles_month.png" class="graph_img"/>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>  
+  		</div>
+      <div class="card-body jobs">
+        <!-- <img src="images/walks.png"  width="223px"/>  -->
+        <div class="progress-bar" data-percent="75" id="walk-prog"></div>
+        
+        <script type="text/javascript">
+          $(".progress-bar").loading();
+        </script>
+
+        <h5 id="walk-deets">2 walks taken today</h5>
+      </div>
+      
+    </div>
+
 		<!-- LEADERBOARD CARD -->
 		<div class="thumbnail">
 			  <div class="card-header">
@@ -211,9 +255,9 @@
 				<li class="list-group-item">Helen<span class="badge badge-primary badge-pill">7</span></li>
 				<li class="list-group-item">Nikki<span class="badge badge-primary badge-pill">0</span></li>
 			  </ul>
-			</div>
-		
+		</div>	
 	</div>
+
 	<div class="col-lg-3">
 		<!-- FEEDING CARD -->
 		<div class="thumbnail">
@@ -229,8 +273,8 @@
 				<div>
 				  <h5>8am Helen &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 5pm Niki</h5> 
 				</div> 
-			  </div>
-			</div>
+		  </div>
+		</div>
 		
 		<!-- HEALTH CARD -->
 		<div class="thumbnail">

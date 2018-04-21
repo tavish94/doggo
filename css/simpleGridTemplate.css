@@ -61,11 +61,20 @@ header {
 #walk-prog {
 	margin-left: 35px;
 }
+
+#modal-walk-prog {
+	position: absolute;
+	margin-left: -75px;
+}
 #walk-deets {
 	position: absolute;
 	margin-left: 40px;
 	bottom: 0;
 }
+#modal-walk-deets {
+	margin: auto;
+}
+
 
 /*input[type=checkbox] {
   transform: scale(1.5);
@@ -174,7 +183,7 @@ header {
 
 .graph_image {
 	/*width: 100%;*/
-	/*margin: auto;*/
+	margin: auto;
 	/*height: auto;*/
 }
 
@@ -204,6 +213,10 @@ header {
 .card-header {
 	display: flex;
 	position: relative;
+}
+
+.card-body {
+	margin: auto;
 }
 
 .dropdown {
@@ -264,11 +277,9 @@ header {
 }
 
 .graph_img {
-	width: 80%;
+	width: 95%;
 	height: auto;
-	max-width: 400px;
-	max-height: 200px;
-	opacity: 0.8;
+	margin: auto;
 
 }
 
