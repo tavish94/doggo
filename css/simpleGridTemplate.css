@@ -30,10 +30,19 @@ header {
 	border-radius: 50%;
 }
 
-
-
-.todo {	
+.new-task {
+	display: flex;
+	position: relative;
 }
+.task-wrap {
+	/*position: absolute;*/
+	left: 0;
+}
+.checkbox-wrap {
+	/*position: absolute;*/
+	right: 0;
+}
+
 .jobs {
 	height: 200px;
 	margin: 0 auto; 

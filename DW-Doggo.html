@@ -67,8 +67,8 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
                   <h4 class="modal-title">Add To Do</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                   <form class="form-group">
@@ -142,24 +142,39 @@
         </div>
         <div class="list-group" id="toDoList"> 
           <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Feed Scout</h5>
-              <small>3 hours ago</small> 
+            <div class="task-wrap">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Feed Scout</h5>
+                <small>3 hours ago</small> 
+              </div>
+              <p class="mb-1">Scout needs to be fed food from the orange bag</p>
             </div>
-            <p class="mb-1">Scout needs to be fed food from the orange bag</p>
+            <div class="checkbox-wrap">
+              <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
+            </div>
           </a> 
           <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Brush Scout</h5>
-              <small>5 hours ago</small> 
+            <div class="task-wrap">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Brush Scout</h5>
+                <small>5 hours ago</small> 
+              </div>
+            </div>
+            <div class="checkbox-wrap">
+              <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
             </div>
           </a> 
           <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Buy a New Bow</h5>
-              <small>1 day ago</small> 
+            <div class="task-wrap">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Buy a New Bow</h5>
+                <small>1 day ago</small> 
+              </div>
+              <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
             </div>
-            <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
+            <div class="checkbox-wrap">
+              <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
+            </div>
           </a> 
         </div>
        </div> 
