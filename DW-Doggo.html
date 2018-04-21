@@ -48,8 +48,8 @@
   </header>
 	
   <!-- Stats Gallery Section -->
- <div class="gallery">
-	<div class="col-sm-6">
+ <div class="row">
+	<div class="col-md-6">
 		<!-- TODO CARD -->
 		<div class="thumbnail todo">
 			  <!-- <div class="card"> -->
@@ -67,8 +67,8 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
                   <h4 class="modal-title">Add To Do</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                   <form class="form-group">
@@ -140,24 +140,48 @@
             </div>
           </div>
         </div>
-        <div class="list-group"> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Feed Scout</h5>
-            <small>3 hours ago</small> </div>
-          <p class="mb-1">Scout needs to be fed food from the orange bag</p>
-          </a> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Brush Scout</h5>
-            <small>5 hours ago</small> </div>
-          </a> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Buy a New Bow</h5>
-            <small>1 day ago</small> </div>
-          <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
-          </a> </div>
+
+        <div class="list-group" id="toDoList"> 
+          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+            <div class="task-wrap">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Feed Scout</h5>
+                <small>3 hours ago</small> 
+              </div>
+              <p class="mb-1">Scout needs to be fed food from the orange bag</p>
+            </div>
+            <div class="checkbox-wrap">
+              <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
+            </div>
+          </a> 
+          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+            <div class="task-wrap">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Brush Scout</h5>
+                <small>5 hours ago</small> 
+              </div>
+            </div>
+            <div class="checkbox-wrap">
+              <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
+            </div>
+          </a> 
+          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+            <div class="task-wrap">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Buy a New Bow</h5>
+                <small>1 day ago</small> 
+              </div>
+              <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
+            </div>
+            <div class="checkbox-wrap">
+              <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
+            </div>
+          </a> 
+        </div>
+      </div>
       <!-- </div> -->
     </div>
-    
+    <div class="col-md-3">
     <!-- WALKS CARD -->
 
     <div class="thumbnail">
@@ -204,9 +228,6 @@
             </div>
           </div>
         </div>  
-
-
-
   		</div>
       <div class="card-body jobs">
         <!-- <img src="images/walks.png"  width="223px"/>  -->
@@ -221,40 +242,6 @@
       
     </div>
 
-    <!-- FEEDING CARD -->
-    <div class="thumbnail">
-      <div class="card-header">
-  			<h4>Feeding</h4>
-  			<button class="add ml-auto">+</button>
-    	</div>
-      <div class="card-body jobs">
-        <div id="feeding">
-          <img src="images/bowl.png" class="fed" width="100px" alt="Image could not be loaded!"> 
-          <img src="images/bowl.png" width="100px" alt="Image could not be loaded!">
-        </div>
-       </div> 
-    </div>
-	<div class="col-sm-3">
-		<!-- WALKS CARD -->
-		<div class="thumbnail">
-				<div class="card-header"> 
-			   <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
-					<h4>Walks</h4>
-					<button class="add ml-auto">+</button>
-				</div>
-			  <div class="card-body jobs">
-				<!-- <img src="images/walks.png"  width="223px"/>  -->
-				<div class="progress-bar" data-percent="75" id="walk-prog"></div>
-
-				<script type="text/javascript">
-				  $(".progress-bar").loading();
-				</script>
-
-				<h5 id="walk-deets">2 walks taken today</h5>
-			  </div>
-
-			</div>
-		
 		<!-- LEADERBOARD CARD -->
 		<div class="thumbnail" style="margin-top: 0px;">
 			  <div class="card-header">
@@ -266,10 +253,11 @@
 				<li class="list-group-item">Helen<span class="badge badge-primary badge-pill">7</span></li>
 				<li class="list-group-item">Nikki<span class="badge badge-primary badge-pill">0</span></li>
 			  </ul>
-			</div>
+		</div>
 		
 	</div>
-	<div class="col-sm-3">
+
+	<div class="col-md-3">
 		<!-- FEEDING CARD -->
 		<div class="thumbnail">
 			  <div class="card-header">
@@ -284,8 +272,8 @@
 				<div>
 				  <h5>8am Helen &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 5pm Niki</h5> 
 				</div> 
-			  </div>
-			</div>
+		  </div>
+		</div>
 		
 		<!-- HEALTH CARD -->
 		<div class="thumbnail" style="margin-top:0px;">
