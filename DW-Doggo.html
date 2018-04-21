@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css">
   
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="js/Util.js"></script>
+  <script src="js/checkbox.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="js/jQuery-plugin-progressbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
@@ -61,7 +63,10 @@
       <!-- <div class="card"> -->
         <div class="card-header">
           <h4>To Do</h4>
-          <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
+          <div class="header-buttons">
+            <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
+            <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
+          </div>
 
           <!-- Modal -->
           <div id="myModal" class="modal fade" role="dialog">
