@@ -19,9 +19,11 @@ body {
 /* Header */
 header {
 	width: 100%;
-	height: 8%;
+/*	height: 8%;*/
 	background-color: var(--heading-color);
 	border-bottom: 1px solid #353635;
+	padding-bottom: 20px;
+	padding-top: 10px;
 }
 
 .prof_img {
@@ -116,7 +118,8 @@ header {
 	margin-bottom: 0px;
 }
 .thumbnail {
-	width: 23%;
+	width: 100%;
+/*	height: 260px;*/
 	text-align: left;
 	float: left;
 	margin-top: 35px;
@@ -302,7 +305,7 @@ header {
 }
 footer {
 	background-color: #B3B3B3;
-	padding-top: 60px;
+	padding-top: 50px;
 	padding-bottom: 60px;
 }
 .intro {
