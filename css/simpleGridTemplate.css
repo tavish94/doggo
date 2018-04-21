@@ -57,6 +57,15 @@ header {
 	bottom: 0;
 }
 
+/*input[type=checkbox] {
+  transform: scale(1.5);
+}*/
+.header-buttons {
+	display: inline-flex;
+	position: absolute;
+	right: 10px;
+}
+
 .fed {
 	/*background-color: #f239df;*/
 	/*filter: hue-rotate(180deg);*/
@@ -179,9 +188,11 @@ header {
 	border-radius: 40px;
 	border-color: silver;
 	color: var(--heading-color);
+	/*position: relative;*/
 }
 .card-header {
 	display: flex;
+	position: relative;
 }
 
 .dropdown {

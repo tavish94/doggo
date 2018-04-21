@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css">
   
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="js/Util.js"></script>
+  <script src="js/checkbox.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="js/jQuery-plugin-progressbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
@@ -44,7 +46,7 @@
       </ul>
     </div>
   </header>
- 	
+	
   <!-- Stats Gallery Section -->
  <div class="gallery">
 	<div class="col-sm-6">
@@ -53,115 +55,114 @@
 			  <!-- <div class="card"> -->
 				<div class="card-header">
 				  <h4>To Do</h4>
-				  <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
+          <div class="header-buttons">
+            <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
+            <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
+          </div>
 
-				  <!-- Modal -->
+					<!-- Modal -->
 				  <div id="myModal" class="modal fade" role="dialog">
 					<div class="modal-dialog">
 
-					  <!-- Modal content-->
-					  <div class="modal-content">
-						<div class="modal-header">
-						  <button type="button" class="close" data-dismiss="modal">&times;</button>
-						  <h4 class="modal-title">Add To Do</h4>
-						</div>
-						<div class="modal-body">
-						<form class="form-group">
-						  <label for="sel1">Assign to: </label>
-							<select class="form-group form-control form-control-lg">
-							  <option>Helen</option>
-							  <option>Tavish</option>
-							  <option>Anna</option>
-							  <option>Nikki</option>
-						  </select>
-						  </form>
-						  <select class="form-group form-control form-control-lg">
-							<option>Walk</option>
-							<option>Feed</option>
-							<option>Health</option>
-						  </select>
-						  <div class="form-group">
-							<div class="input-group date" id="datetimepicker1">
-							  <input type="text" class="form-control" />
-							  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-							  </span>
-							</div>
-						  </div>
-						  <script type="text/javascript">
-							console.log("IT WORKED");
-							$(function () {
-							  $('#datetimepicker1').datetimepicker();
-							});
-						  </script>
-						  <div class="checkbox">
-							<label class="checkbox-inline"><input type="checkbox"> M</label>
-							<label class="checkbox-inline"><input type="checkbox"> T</label>
-							<label class="checkbox-inline"><input type="checkbox"> W</label>
-							<label class="checkbox-inline"><input type="checkbox"> TR</label>
-							<label class="checkbox-inline"><input type="checkbox"> F</label>
-							<label class="checkbox-inline"><input type="checkbox"> S</label>
-							<label class="checkbox-inline"><input type="checkbox"> SU</label>
-						  </div>
-						  <div class="form-group">
-							<label for="sel1">Reminder:</label>
-							<form class="form-inline">
-							  <select class="form-control">
-								<option>1</option>
-								<option>5</option>
-								<option>10</option>
-								<option>15</option>
-								<option>30</option>
-								<option>45</option>
-							  </select>
-							  <select class="form-control">
-								<option>minutes</option>
-								<option>hours</option>
-								<option>days</option>
-							  </select>
-							</form>
-							<div class="form-group">
-							  <label for="usr">Notes:</label>
-							  <input type="text" class="form-control" id="usr">
-							</div>
-						  </div>
-						</div>
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTask()">Submit</button>
-						  <script>
-							function createTask() {
-							  var card = document.createElement("a");
-							  document.getElement
-							  var div = document.createElement("div");
-							  var h5 = document.createElement("h5");
-							  var small = document.createElement("small");
-							  div.appendChild(h5);
-							  div.appendChild(small);
-							  card.appendChild(div);
-							}
-						  </script>
-						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-				<div class="list-group"> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-				  <div class="d-flex w-100 justify-content-between">
-					<h5 class="mb-1">Feed Scout</h5>
-					<small>3 hours ago</small> </div>
-				  <p class="mb-1">Scout needs to be fed food from the orange bag</p>
-				  </a> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-				  <div class="d-flex w-100 justify-content-between">
-					<h5 class="mb-1">Brush Scout</h5>
-					<small>5 hours ago</small> </div>
-				  </a> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-				  <div class="d-flex w-100 justify-content-between">
-					<h5 class="mb-1">Buy a New Bow</h5>
-					<small>1 day ago</small> </div>
-				  <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
-				  </a> </div>
-			  <!-- </div> -->
-			</div>
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add To Do</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form-group">
+                  <label for="sel1">Assign to: </label>
+                    <select class="form-group form-control form-control-lg">
+                      <option>Helen</option>
+                      <option>Tavish</option>
+                      <option>Anna</option>
+                      <option>Nikki</option>
+                    </select>
+                  </form>
+                  <select id="eventType" class="form-group form-control form-control-lg">
+                    <option>Walk</option>
+                    <option>Feed</option>
+                    <option>Health</option>
+                  </select>
+                  <div class="form-group">
+                    <div class="input-group date" id="datetimepicker1">
+                      <input type="text" class="form-control" />
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    $(function () {
+                      $('#datetimepicker1').datetimepicker();
+                    });
+                  </script>
+                  <form class="form-group">
+                    <label>Repeat: </label>
+                    <div class="checkbox">
+                      <label class="checkbox-inline"><input type="checkbox"> M</label>
+                      <label class="checkbox-inline"><input type="checkbox"> T</label>
+                      <label class="checkbox-inline"><input type="checkbox"> W</label>
+                      <label class="checkbox-inline"><input type="checkbox"> TR</label>
+                      <label class="checkbox-inline"><input type="checkbox"> F</label>
+                      <label class="checkbox-inline"><input type="checkbox"> S</label>
+                      <label class="checkbox-inline"><input type="checkbox"> SU</label>
+                    </div>
+                  </form>
+                  <div class="form-group">
+                    <label for="sel1">Reminder:</label>
+                    <form class="form-inline">
+                      <select class="form-control">
+                        <option>1</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                      </select>
+                      <select class="form-control" id="sel2">
+                        <option>minutes</option>
+                        <option>hours</option>
+                        <option>days</option>
+                      </select>
+                    </form>
+                    <div class="form-group">
+                      <label for="usr">Notes:</label>
+                      <input id="notes" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTask()">Submit</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-group" id="toDoList"> 
+          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Feed Scout</h5>
+              <small>3 hours ago</small> 
+            </div>
+            <p class="mb-1">Scout needs to be fed food from the orange bag</p>
+          </a> 
+          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Brush Scout</h5>
+              <small>5 hours ago</small> 
+            </div>
+          </a> 
+          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Buy a New Bow</h5>
+              <small>1 day ago</small> 
+            </div>
+            <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
+          </a> 
+        </div>
+       </div> 
     </div>
 	<div class="col-sm-3">
 		<!-- WALKS CARD -->
