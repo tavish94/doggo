@@ -28,6 +28,9 @@ header {
 .prof_img {
 	border-radius: 50%;
 }
+
+
+
 .todo {	
 }
 
@@ -42,6 +45,20 @@ header {
 	line-height: 2em;
 	font-size: 22px;
 }
+
+#data_title {
+	color: #fff;
+	font-weight: bold;
+	margin-left: auto;
+	letter-spacing: 4px;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 15px;
+	line-height: 2em;
+	font-size: 30px;
+}
+
+
 .hero_header {
 	color: #FFFFFF;
 	text-align: center;
@@ -84,6 +101,33 @@ header {
 	padding-top: 20px;
 	border-bottom: 4px solid var(--heading-color);
 }
+
+.data_thumbnail {
+	width: 98%;
+}
+
+.mile_tracker {
+	text-align: center;
+	font-size: 50px;
+	color: #31cc02;
+}
+
+.mile_text {
+	text-align: center;
+	font-size: 34px;
+	color: #596268;
+}
+
+.progress_img {
+	margin: auto;
+}
+
+.graph_image {
+	/*width: 100%;*/
+	/*margin: auto;*/
+	/*height: auto;*/
+}
+
 .gallery .thumbnail h4 {
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -92,12 +136,14 @@ header {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
 .gallery .thumbnail p {
 	margin: 0;
 	color: #B3B3B3;
 	text-align: left;
 	padding-left: 20px;
 }
+
 .add {
 	background-color: white;
 	border-radius: 40px;
@@ -111,12 +157,14 @@ header {
 .intro {
 	background-color: #FFFFFF;
 	padding-bottom: 35px;
+	width: 100%;
 }
 .column {
 	width: 50%;
 	text-align: center;
 	padding-top: 30px;
-	float: left;
+	/*float: left;*/
+	margin: auto;
 }
 .intro .column h3 {
 	color: #FFFFFF;
@@ -132,6 +180,16 @@ header {
 	max-height: 200px;
 	opacity: 0.8;
 }
+
+.graph_img {
+	width: 80%;
+	height: auto;
+	max-width: 400px;
+	max-height: 200px;
+	opacity: 0.8;
+
+}
+
 .intro .column p {
 	padding-left: 30px;
 	padding-right: 30px;
@@ -200,6 +258,8 @@ footer {
 	padding-right: 20px;
 }
 
+
+
 /* Mobile */
 @media (max-width: 320px) {
 .logo {
@@ -225,6 +285,7 @@ footer {
 .thumbnail {
 	width: 100%;
 }
+
 .column {
 	width: 100%;
 	margin-top: 0px;
@@ -255,13 +316,12 @@ footer {
 .thumbnail {
 	width: 100%;
 }
+
 .column {
 	width: 100%;
 	margin-top: 0px;
 }
-.thumbnail {
-	width: 100%;
-}
+
 .text_column {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -289,6 +349,10 @@ footer {
 }
 .thumbnail {
 	width: 48%;
+}
+
+.data_thumbnail {
+	width: 98%;
 }
 .text_column {
 	width: 90%;
