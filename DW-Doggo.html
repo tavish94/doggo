@@ -46,28 +46,23 @@
       </ul>
     </div>
   </header>
-  <!-- Hero Section -->
-  <section class="intro">
-    <div class="column">
-        <h3>Scout</h3>
-        <img src="images/scout.jpg" alt="" class="profile prof_img"> 
-    </div>
-  </section>
+	
   <!-- Stats Gallery Section -->
-  <div class="gallery">
-    <!-- TODO CARD -->
-    <div class="thumbnail todo">
-      <!-- <div class="card"> -->
-        <div class="card-header">
-          <h4>To Do</h4>
+ <div class="gallery">
+	<div class="col-sm-6">
+		<!-- TODO CARD -->
+		<div class="thumbnail todo">
+			  <!-- <div class="card"> -->
+				<div class="card-header">
+				  <h4>To Do</h4>
           <div class="header-buttons">
             <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
             <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
           </div>
 
-          <!-- Modal -->
-          <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
+					<!-- Modal -->
+				  <div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
 
               <!-- Modal content-->
               <div class="modal-content">
@@ -85,7 +80,7 @@
                       <option>Nikki</option>
                     </select>
                   </form>
-                  <select id="eventType" class="form-group" class="form-control form-control-lg">
+                  <select id="eventType" class="form-group form-control form-control-lg">
                     <option>Walk</option>
                     <option>Feed</option>
                     <option>Health</option>
@@ -133,7 +128,7 @@
                     </form>
                     <div class="form-group">
                       <label for="usr">Notes:</label>
-                      <input id="notes" type="text" class="form-control" id="usr">
+                      <input id="notes" type="text" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -182,72 +177,74 @@
             </div>
           </a> 
         </div>
-      <!-- </div> -->
+       </div> 
     </div>
-    
-    <!-- WALKS CARD -->
-    <div class="thumbnail">
-  		<div class="card-header"> 
-       <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
-  			<h4>Walks</h4>
-  			<button class="add ml-auto">+</button>
-  		</div>
-      <div class="card-body jobs">
-        <!-- <img src="images/walks.png"  width="223px"/>  -->
-        <div class="progress-bar" data-percent="75" id="walk-prog"></div>
-        
-        <script type="text/javascript">
-          $(".progress-bar").loading();
-        </script>
+	<div class="col-sm-3">
+		<!-- WALKS CARD -->
+		<div class="thumbnail">
+				<div class="card-header"> 
+			   <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
+					<h4>Walks</h4>
+					<button class="add ml-auto">+</button>
+				</div>
+			  <div class="card-body jobs">
+				<!-- <img src="images/walks.png"  width="223px"/>  -->
+				<div class="progress-bar" data-percent="75" id="walk-prog"></div>
 
-        <h5 id="walk-deets">2 walks taken today</h5>
-      </div>
-      
-    </div>
+				<script type="text/javascript">
+				  $(".progress-bar").loading();
+				</script>
 
-    <!-- FEEDING CARD -->
-    <div class="thumbnail">
-      <div class="card-header">
-  			<h4>Feeding</h4>
-  			<button class="add ml-auto">+</button>
-    	</div>
-      <div class="card-body jobs">
-        <div id="feeding">
-          <img src="images/bowl.png" class="fed" width="100px" alt="Image could not be loaded!"> 
-          <img src="images/bowl.png" width="100px" alt="Image could not be loaded!">
-        </div>
-        <div>
-          <h5>8am Helen &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 5pm Niki</h5> 
-        </div> 
-      </div>
-    </div>
+				<h5 id="walk-deets">2 walks taken today</h5>
+			  </div>
 
-    <!-- HEALTH CARD -->
-    <div class="thumbnail">
-      <div class="card-header">
-  			<h4>Health</h4>
-  			<button class="add ml-auto">+</button>
-  		</div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Vet Visit 03/24/18</li>
-        <li class="list-group-item">Heartworm Medication 04/01/18</li>
-        <li class="list-group-item">Groomer's Appointment 04/05/18</li>
-      </ul>
-    </div>
-
-    <!-- LEADERBOARD CARD -->
-    <div class="thumbnail">
-      <div class="card-header">
-  			<h4>Leaderboard</h4>
-  			<button class="add ml-auto">+</button>
-  		</div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Tavish <span class="badge badge-primary badge-pill">14</span></li>
-        <li class="list-group-item">Anna<span class="badge badge-primary badge-pill">10</span></li>
-        <li class="list-group-item">Helen<span class="badge badge-primary badge-pill">7</span></li>
-        <li class="list-group-item">Nikki<span class="badge badge-primary badge-pill">0</span></li>
-      </ul>
-    </div>
+			</div>
+		
+		<!-- LEADERBOARD CARD -->
+		<div class="thumbnail" style="margin-top: 0px;">
+			  <div class="card-header">
+					<h4>Leaderboard</h4>
+				</div>
+			  <ul class="list-group list-group-flush">
+				<li class="list-group-item">Tavish <span class="badge badge-primary badge-pill">14</span></li>
+				<li class="list-group-item">Anna<span class="badge badge-primary badge-pill">10</span></li>
+				<li class="list-group-item">Helen<span class="badge badge-primary badge-pill">7</span></li>
+				<li class="list-group-item">Nikki<span class="badge badge-primary badge-pill">0</span></li>
+			  </ul>
+			</div>
+		
+	</div>
+	<div class="col-sm-3">
+		<!-- FEEDING CARD -->
+		<div class="thumbnail">
+			  <div class="card-header">
+					<h4>Feeding</h4>
+					<button class="add ml-auto">+</button>
+				</div>
+			  <div class="card-body jobs">
+				<div id="feeding">
+				  <img src="images/bowl.png" class="fed" width="100px" alt="Image could not be loaded!"> 
+				  <img src="images/bowl.png" width="100px" alt="Image could not be loaded!">
+				</div>
+				<div>
+				  <h5>8am Helen &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 5pm Niki</h5> 
+				</div> 
+			  </div>
+			</div>
+		
+		<!-- HEALTH CARD -->
+		<div class="thumbnail" style="margin-top:0px;">
+			  <div class="card-header">
+					<h4>Health</h4>
+					<button class="add ml-auto">+</button>
+				</div>
+			  <ul class="list-group list-group-flush">
+				<li class="list-group-item">Vet Visit 03/24/18</li>
+				<li class="list-group-item">Heartworm Medication 04/01/18</li>
+				<li class="list-group-item">Groomer's Appointment 04/05/18</li>
+			  </ul>
+			</div>	
+	</div>
   </div>
 
   <!-- Footer Section -->
