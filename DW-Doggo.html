@@ -50,186 +50,181 @@
   <!-- Stats Gallery Section -->
  <div class="row">
 	<div class="col-lg-6">
+
 		<!-- TODO CARD -->
 		<div class="thumbnail todo">
-			  <!-- <div class="card"> -->
-				<div class="card-header">
-				  <h4>To Do</h4>
-          <div class="header-buttons">
-            <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
-            <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
-          </div>
-
-					<!-- Modal -->
-				  <div id="myModal" class="modal fade" role="dialog">
-					<div class="modal-dialog">
-
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title">Add Chore</h3>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                  <form class="form-group">
-                  <label>Assign: </label>
-                  <select id="eventType" class="form-group form-control form-control-lg">
-                    <option>Walk</option>
-                    <option>Feed</option>
-                    <option>Health</option>
-                  </select>
-                  <label>To: </label>
-                    <select class="form-group form-control form-control-lg">
-                      <option>Helen</option>
-                      <option>Tavish</option>
-                      <option>Anna</option>
-                      <option>Nikki</option>
-                    </select>
-                  </form>
-                  <label>For: </label>
-                  <div class="form-group">
-                    <div class="input-group date" id="datetimepicker1">
-                      <input type="text" class="form-control" />
-                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    $(function () {
-                      $('#datetimepicker1').datetimepicker();
-                    });
-                  </script>
-                  <form class="form-group">
-                    <label>Repeat: </label>
-                    <div class="checkbox">
-                      <label class="checkbox-inline"><input type="checkbox"> M</label>
-                      <label class="checkbox-inline"><input type="checkbox"> T</label>
-                      <label class="checkbox-inline"><input type="checkbox"> W</label>
-                      <label class="checkbox-inline"><input type="checkbox"> R</label>
-                      <label class="checkbox-inline"><input type="checkbox"> F</label>
-                      <label class="checkbox-inline"><input type="checkbox"> S</label>
-                      <label class="checkbox-inline"><input type="checkbox"> U</label>
-                    </div>
-                  </form>
-                  <div class="form-group">
-                    <label for="sel1">Reminder:</label>
-                    <form class="form-inline">
-                      <select class="form-control">
-                        <option>1</option>
-                        <option>5</option>
-                        <option>10</option>
-                        <option>15</option>
-                        <option>30</option>
-                        <option>45</option>
-                      </select>
-                      <select class="form-control" id="sel2">
-                        <option>minutes</option>
-                        <option>hours</option>
-                        <option>days</option>
-                      </select>
-                    </form>
-                    <div class="form-group">
-                      <label for="usr">Notes:</label>
-                      <input id="notes" type="text" class="form-control">
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTask()">Submit</button>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
+			<div class="card-header">
+			  <h4>To Do</h4>
+        <div class="header-buttons">
+          <button class="add ml-auto" data-toggle="modal" data-target="#myModal">+</button>
+          <label class="checkbox-inline" id="check-all"><input type="checkbox"></label>
         </div>
 
-        <div class="list-group" id="toDoList"> 
-          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-            <div class="task-wrap">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Feed Scout</h5>
-                <small>3 hours ago</small> 
-              </div>
-              <p class="mb-1">Scout needs to be fed food from the orange bag</p>
-            </div>
-            <div class="checkbox-wrap">
-              <label class="checkbox-inline"><input type="checkbox"></label>
-            </div>
-          </a> 
-          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-            <div class="task-wrap">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Brush Scout</h5>
-                <small>5 hours ago</small> 
-              </div>
-            </div>
-            <div class="checkbox-wrap">
-              <label class="checkbox-inline"><input type="checkbox"></label>
-            </div>
-          </a> 
-          <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-            <div class="task-wrap">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Buy a New Bow</h5>
-                <small>1 day ago</small> 
-              </div>
-              <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
-            </div>
-            <div class="checkbox-wrap">
-              <label class="checkbox-inline"><input type="checkbox"></label>
-            </div>
-          </a> 
-        </div>
-      </div>
-      <!-- </div> -->
-    </div>
+				<!-- Modal -->
+			  <div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
 
-    <div class="col-md-3">
-    <!-- WALKS CARD -->
-    <div class="thumbnail">
-  		<div class="card-header">
-  			<h4>Walks</h4>
-  			<button class="add ml-auto" data-toggle="modal" data-target="#dataModal">View Stats</button>
-
-        <!-- Data Modal -->
-        <div id="dataModal" class="modal fade" role="dialog">
-          <div class="modal-dialog" style="width:90%; max-width: 1100px;">
+            <!-- Modal content-->
             <div class="modal-content">
-
               <div class="modal-header">
+                <h3 class="modal-title">Add Chore</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-
               <div class="modal-body">
-
-                <div class="card">
-                  <div class="card-header">
-                    <h4>Daily Walk Total</h4>
-                  </div> 
-                  <div class="card-body jobs">
-                    <div class="progress-bar" data-percent="75" id="modal-walk-prog"></div>
+                <form class="form-group">
+                <label>Assign: </label>
+                <select id="eventType" class="form-group form-control form-control-lg">
+                  <option>Walk</option>
+                  <option>Feed</option>
+                  <option>Health</option>
+                </select>
+                <label>To: </label>
+                  <select class="form-group form-control form-control-lg">
+                    <option>Helen</option>
+                    <option>Tavish</option>
+                    <option>Anna</option>
+                    <option>Nikki</option>
+                  </select>
+                </form>
+                <label>For: </label>
+                <div class="form-group">
+                  <div class="input-group date" id="datetimepicker1">
+                    <input type="text" class="form-control" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
                   </div>
-                  <div id="modal-walk-deets"> <h5>2 walks taken today</h5> </div>
                 </div>
-
-                <div class="card">
-                  <div class="card-header">
-                    <h4>Walks This Week</h4>
+                <script type="text/javascript">
+                  $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                  });
+                </script>
+                <form class="form-group">
+                  <label>Repeat: </label>
+                  <div class="checkbox">
+                    <label class="checkbox-inline"><input type="checkbox"> M</label>
+                    <label class="checkbox-inline"><input type="checkbox"> T</label>
+                    <label class="checkbox-inline"><input type="checkbox"> W</label>
+                    <label class="checkbox-inline"><input type="checkbox"> R</label>
+                    <label class="checkbox-inline"><input type="checkbox"> F</label>
+                    <label class="checkbox-inline"><input type="checkbox"> S</label>
+                    <label class="checkbox-inline"><input type="checkbox"> U</label>
                   </div>
-                  <img src="images/miles_week.png" class="graph_img"/>
-                </div>
-
-                <div class="card">
-                  <div class="card-header">
-                    <h4>Walks This Month</h4>
+                </form>
+                <div class="form-group">
+                  <label for="sel1">Reminder:</label>
+                  <form class="form-inline">
+                    <select class="form-control">
+                      <option>1</option>
+                      <option>5</option>
+                      <option>10</option>
+                      <option>15</option>
+                      <option>30</option>
+                      <option>45</option>
+                    </select>
+                    <select class="form-control" id="sel2">
+                      <option>minutes</option>
+                      <option>hours</option>
+                      <option>days</option>
+                    </select>
+                  </form>
+                  <div class="form-group">
+                    <label for="usr">Notes:</label>
+                    <input id="notes" type="text" class="form-control">
                   </div>
-                  <img src="images/miles_month.png" class="graph_img"/>
                 </div>
-
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTask()">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
+      </div>
+
+      <div class="list-group" id="toDoList"> 
+        <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+          <div class="task-wrap">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Feed Scout</h5>
+              <small>3 hours ago</small> 
+            </div>
+            <p class="mb-1">Scout needs to be fed food from the orange bag</p>
+          </div>
+          <div class="checkbox-wrap">
+            <label class="checkbox-inline"><input type="checkbox"></label>
+          </div>
+        </a> 
+        <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+          <div class="task-wrap">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Brush Scout</h5>
+              <small>5 hours ago</small> 
+            </div>
+          </div>
+          <div class="checkbox-wrap">
+            <label class="checkbox-inline"><input type="checkbox"></label>
+          </div>
+        </a> 
+        <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+          <div class="task-wrap">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Buy a New Bow</h5>
+              <small>1 day ago</small> 
+            </div>
+            <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
+          </div>
+          <div class="checkbox-wrap">
+            <label class="checkbox-inline"><input type="checkbox"></label>
+          </div>
+        </a> 
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <!-- WALKS CARD -->
+    <div class="thumbnail" id="userdiv" data-toggle="modal" data-target="#dataModal">
+  		<div class="card-header">
+  			<h4>Walks</h4>
+  			<!-- <button class="add ml-auto" data-toggle="modal" data-target="#dataModal">View Stats</button> -->
+          <div class="modal fade " id='dataModal' data-backdrop="false">
+            <div class="modal-dialog" style="width:80%; max-width: 1100px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <h3>Walking History</h3>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="card">
+                        <div class="card-header">
+                          <h4>Daily Walk Total</h4>
+                        </div> 
+                        <div class="card-body jobs">
+                          <div class="progress-bar" data-percent="75" id="modal-walk-prog"></div>
+                        </div>
+                        <div id="modal-walk-deets"> <h5>2 walks taken today</h5> </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header">
+                          <h4>Walks This Week</h4>
+                        </div>
+                        <img src="images/miles_week.png" class="graph_img"/>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header">
+                          <h4>Walks This Month</h4>
+                        </div>
+                        <img src="images/miles_month.png" class="graph_img"/>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+      </div>
   		</div>
       <div class="card-body jobs">
         <!-- <img src="images/walks.png"  width="223px"/>  -->
