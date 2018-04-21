@@ -30,6 +30,34 @@ header {
 }
 .todo {	
 }
+.jobs {
+	height: 200px;
+	margin: 0 auto; 
+	position: relative;
+	justify-content: center;
+}
+#feeding {
+	margin-left: 10px;
+	display: inline;
+	text-align: center;
+}
+#bowls {
+	padding: 15px;,
+}
+#walk-prog {
+	margin-left: 35px;
+}
+#walk-deets {
+	position: absolute;
+	margin-left: 40px;
+	bottom: 0;
+}
+
+.fed {
+	/*background-color: #f239df;*/
+	/*filter: hue-rotate(180deg);*/
+}
+
 
 .logo {
 	color: #fff;
@@ -107,6 +135,36 @@ header {
 .card-header {
 	display: flex;
 }
+
+.dropdown {
+	position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  
+}
+.icons {
+	background-color: transparent !important;
+	background-size: cover;
+	background-position: center;
+	border: none !important; 
+	height: 30px;
+	width: 30px;
+	top: -50px;
+	position: absolute;
+}
+#settings {
+	background-image: url("../images/gear.png");
+	filter: invert(100%);
+	right: 15px;
+}
+#profile {
+	background-image: url("../images/profile.png");
+	right: 60px;
+}
+
 /* More info */
 .intro {
 	background-color: #FFFFFF;
@@ -142,6 +200,12 @@ header {
 	margin-right: 20px;
 	width: 80%;
 	margin-top: 4%;
+}
+.pinned {
+	margin-left: 20px;
+	position: absolute;
+	width: 80%;
+	bottom: 0;
 }
 .button {
 	width: 200px;
@@ -182,7 +246,7 @@ header {
 footer {
 	background-color: #B3B3B3;
 	padding-top: 60px;
-	padding-bottom: 60PX;
+	padding-bottom: 60px;
 }
 .intro {
 	display: inline-block;
