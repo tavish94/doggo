@@ -172,11 +172,54 @@
     </div>
     
     <!-- WALKS CARD -->
+
     <div class="thumbnail">
-  		<div class="card-header"> 
-       <!-- type="button" data-toggle="modal" data-target="#walk-details"> -->
+  		<div class="card-header">
   			<h4>Walks</h4>
-  			<button class="add ml-auto">+</button>
+  			<button class="add ml-auto" data-toggle="modal" data-target="#dataModal">View Stats</button>
+
+        <!-- Data Modal -->
+        <div id="dataModal" class="modal fade" role="dialog">
+          <div class="modal-dialog" style="width:90%; max-width: 1100px;">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <div class="modal-body">
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Daily Walk Total</h4>
+                  </div> 
+                  <div class="card-body jobs">
+                    <div class="progress-bar" data-percent="75" id="modal-walk-prog"></div>
+                  </div>
+                  <div id="modal-walk-deets"> <h5>2 walks taken today</h5> </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Walks This Week</h4>
+                  </div>
+                  <img src="images/miles_week.png" class="graph_img"/>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Walks This Month</h4>
+                  </div>
+                  <img src="images/miles_month.png" class="graph_img"/>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
+
   		</div>
       <div class="card-body jobs">
         <!-- <img src="images/walks.png"  width="223px"/>  -->
