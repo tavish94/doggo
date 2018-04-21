@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 :root {
---heading-color: #6DC7D0;
-}
+	--heading-color: #6DC7D0;}
 
 /* Body */
 body {
@@ -42,7 +41,7 @@ header {
 	text-align: center;
 }
 #bowls {
-	padding: 15px;,
+	padding: 15px;
 }
 #walk-prog {
 	margin-left: 35px;
