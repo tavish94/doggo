@@ -158,8 +158,7 @@ header {
 	border-radius: 3px;
 	padding-top: 20px 0;
 	border-bottom: 4px solid var(--heading-color);
-
-	min-height: 255px;
+/*	min-height: 255px;*/
 }
 
 .data_thumbnail {
