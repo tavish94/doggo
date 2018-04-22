@@ -118,7 +118,6 @@ header {
 	font-size: 30px;
 }
 
-
 .hero_header {
 	color: #FFFFFF;
 	text-align: center;
@@ -211,7 +210,6 @@ header {
 	border-radius: 40px;
 	border-color: silver;
 	color: var(--heading-color);
-	/*position: relative;*/
 }
 .card-header {
 	display: flex;
@@ -303,27 +301,10 @@ header {
 	width: 80%;
 	bottom: 0;
 }
-.button {
-	width: 200px;
-	margin-top: 40px;
-	margin-right: auto;
-	margin-bottom: auto;
-	margin-left: auto;
-	padding-top: 20px;
-	padding-right: 10px;
-	padding-bottom: 20px;
-	padding-left: 10px;
-	text-align: center;
-	vertical-align: middle;
-	border-radius: 0px;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 2px;
-	border: 3px solid #FFFFFF;
-	color: #FFFFFF;
+.button_not_bs {
 	transition: all 0.3s linear;
 }
-.button:hover {
+.button_not_bs:hover {
 	background-color: var(--heading-color);
 	color: #FFFFFF;
 	cursor: pointer;

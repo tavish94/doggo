@@ -5,10 +5,30 @@ Util.events(document, {
                 var tasks = document.getElementsByClassName("new-task");
                 for (var i = 0; i < tasks.length; i++) { 
                     console.log(tasks[i])
+                    tasks[i].style.setProperty()
                 }
             }
         });
-    }
+
+        // $("walk-card").on("click", function(){
+        //     var modalOpen = $("#dataModal").hasClass('in');
+        //     if (modalOpen) {
+        //         $("#dataModal").modal("hide");
+        //     }
+        //     else {
+        //         $("#dataModal").modal("show");
+        //     }
+        // });
+
+
+    },
+
+    // "click": function(evt) {
+    //     var modalOpen = $("#dataModal").hasClass('in');
+    //     if (modalOpen) {
+    //         $("#dataModal").modal("hide");
+    //     }
+    // }
 });
 
 function createTask() {
