@@ -34,7 +34,6 @@
       <button class="btn btn-primary icons" type="button" id="profile" data-toggle="dropdown"><span class="no-caret"></span></button>
       <ul role="menu" class="dropdown-menu dropdown-menu-right">
         <li><a href="#">Profile</a></li>
-        <li><a href="#">Log Out</a></li>
       </ul>
     </div>
     <div class="dropdown">
@@ -137,6 +136,7 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTask()">Submit</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
+
             </div>
           </div>
         </div>
@@ -144,16 +144,14 @@
 
       <div class="list-group" id="toDoList"> 
         <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-          <div class="task-wrap">
+          <div class="task-wrap" id="scout">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Feed Scout</h5>
               <small>3 hours ago</small> 
             </div>
             <p class="mb-1">Scout needs to be fed food from the orange bag</p>
           </div>
-          <div class="checkbox-wrap">
-            <label class="checkbox-inline"><input type="checkbox"></label>
-          </div>
+          <div class="completed">Completed</div>
         </a> 
         <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
           <div class="task-wrap">
@@ -162,9 +160,7 @@
               <small>5 hours ago</small> 
             </div>
           </div>
-          <div class="checkbox-wrap">
-            <label class="checkbox-inline"><input type="checkbox"></label>
-          </div>
+          <div class="completed">Completed</div>
         </a> 
         <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
           <div class="task-wrap">
@@ -174,9 +170,7 @@
             </div>
             <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
           </div>
-          <div class="checkbox-wrap">
-            <label class="checkbox-inline"><input type="checkbox"></label>
-          </div>
+          <div class="completed">Completed</div>
         </a> 
       </div>
     </div>

@@ -36,9 +36,25 @@ header {
 	position: relative;
 }
 .task-wrap {
-	/*position: absolute;*/
-	left: 0;
+	display: inline-block;
 }
+.hide {
+    display: none;
+}
+.show {
+    display: inline-block;
+}
+.completed {
+	color: white;
+	background-color: #6DC7D0;
+	text-align: center;
+	padding: 5px 10px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
 .checkbox-wrap {
 	/*position: absolute;*/
 	right: 0;

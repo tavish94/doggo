@@ -1,34 +1,39 @@
 Util.events(document, {
     "DOMContentLoaded": function() {
-        document.getElementById("check-all").addEventListener("click",  function(e) {
-            if ($("#checkboxId").prop('checked', true)) {
-                var tasks = document.getElementsByClassName("new-task");
-                for (var i = 0; i < tasks.length; i++) { 
-                    console.log(tasks[i])
-                    tasks[i].style.setProperty()
-                }
-            }
-        });
-
-        // $("walk-card").on("click", function(){
-        //     var modalOpen = $("#dataModal").hasClass('in');
-        //     if (modalOpen) {
-        //         $("#dataModal").modal("hide");
-        //     }
-        //     else {
-        //         $("#dataModal").modal("show");
-        //     }
-        // });
-
-
+        var tasks = document.getElementsByClassName("completed");
+        for (var i = 0; i < tasks.length; i++) { 
+            tasks[i].classList.add("hide");
+        }
     },
 
-    // "click": function(evt) {
-    //     var modalOpen = $("#dataModal").hasClass('in');
-    //     if (modalOpen) {
-    //         $("#dataModal").modal("hide");
-    //     }
-    // }
+    "click": function(evt) {
+        var x = evt.clientX;
+        var y = evt.clientY;
+        var task = document.elementFromPoint(x, y);
+        var taskClasses = task.className.split(" ");
+        console.log(taskClasses)
+        if (taskClasses.indexOf("new-task") >= 0) {
+
+            var completed = task.getElementsByClassName("completed")[0];
+            var completedClasses = completed.className.split(" ");
+
+            if (completedClasses.indexOf("hide") >= 0) {
+                var openTasks = document.getElementsByClassName("completed");
+                for (var i = 0; i < openTasks.length; i++) { 
+                    openTasks[i].classList.add("hide");
+                    openTasks[i].classList.remove("show");
+                }
+                completed.classList.remove("hide");
+                completed.classList.add("show");
+            } 
+            else {
+                console.log("add")
+                completed.classList.remove("show");
+                completed.classList.add("hide");
+            }
+        }
+    },
+
 });
 
 function createTask() {
