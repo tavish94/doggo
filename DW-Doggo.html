@@ -246,9 +246,32 @@
     </div>
 
 		<!-- LEADERBOARD CARD -->
-		<div class="thumbnail">
+		<div class="thumbnail" data-toggle="modal" data-target="#leaderModal">
 			  <div class="card-header">
 					<h4>Leaderboard</h4>
+
+              <div class="modal fade" id="leaderModal" data-backdrop="false">
+                <div class="modal-dialog" style="width:80%; max-width: 1100px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                          <h3>Leaderboard</h3>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+
+                          <div class="card">
+                            <div class="card-header">
+                              <h4>Miles Walked This Week</h4>
+                            </div>
+                            <img src="images/family_walks.png" class="graph_img"/>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+          </div>
+
+
 				</div>
 			  <ul class="list-group list-group-flush">
 				<li class="list-group-item">Tavish <span class="badge badge-primary badge-pill">14</span></li>
