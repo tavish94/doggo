@@ -6,15 +6,34 @@ Util.events(document, {
             var currTask = tasks[i];
             currTask.classList.add("hide");
         }
+
+        $(".new-task").click(function(evt) {
+
+        })
     },
 
     "click": function(evt) {
         var x = evt.clientX;
         var y = evt.clientY;
-        var task = document.elementFromPoint(x, y);
+        var task = document.elementsFromPoint(x, y);
+        console.log(task)
+        for (var i = 0; i < task.length; i++) { 
+            var classNames = task[i].className.split(" ")
+            if (classNames.indexOf("completed") >= 0) {
+                task = task[i];
+                break;
+            }
+            else if (classNames.indexOf("new-task") >= 0) {
+                task = task[i];
+                break;
+            }
+        }
         var taskClasses = task.className.split(" ");
-        if (taskClasses.indexOf("new-task") >= 0) {
-
+        if (taskClasses.indexOf("completed") >= 0) {
+            clickedCompleted(task);
+        }
+        else if (taskClasses.indexOf("new-task") >= 0) {
+            console.log("hre")
             var completed = task.getElementsByClassName("completed")[0];
             var completedClasses = completed.className.split(" ");
 
@@ -27,9 +46,6 @@ Util.events(document, {
                 completed.classList.remove("show");
                 completed.classList.add("hide");
             }
-        }
-        else if (taskClasses.indexOf("completed") >= 0) {
-            clickedCompleted(task);
         }
         else {
             resetCompleted();
