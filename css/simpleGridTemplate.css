@@ -27,6 +27,11 @@ header {
 	margin-bottom: 20px;
 }
 
+small {
+	position: absolute;
+	right: 0;
+}
+
 .prof_img {
 	border-radius: 50%;
 }
@@ -37,6 +42,8 @@ header {
 }
 .task-wrap {
 	display: inline-block;
+	position: relative;
+	width: 80%;
 }
 .hide {
     display: none;
@@ -226,6 +233,7 @@ header {
 	border-radius: 40px;
 	border-color: silver;
 	color: var(--heading-color);
+	margin: auto;
 }
 .card-header {
 	display: flex;

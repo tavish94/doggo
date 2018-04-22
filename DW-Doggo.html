@@ -68,15 +68,16 @@
                 <h3 class="modal-title">Add Chore</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
+
               <div class="modal-body">
                 <form class="form-group">
-                <label>Assign: </label>
-                <select id="eventType" class="form-group form-control form-control-lg">
-                  <option>Walk</option>
-                  <option>Feed</option>
-                  <option>Health</option>
-                </select>
-                <label>To: </label>
+                  <label>Assign: </label>
+                  <select id="eventType" class="form-group form-control form-control-lg">
+                    <option>Walk</option>
+                    <option>Feed</option>
+                    <option>Health</option>
+                  </select>
+                  <label>To: </label>
                   <select class="form-group form-control form-control-lg">
                     <option>Helen</option>
                     <option>Tavish</option>
@@ -88,8 +89,7 @@
                 <div class="form-group">
                   <div class="input-group date" id="datetimepicker1">
                     <input type="text" class="form-control" />
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
                 </div>
                 <script type="text/javascript">
@@ -130,14 +130,19 @@
                     <label for="usr">Notes:</label>
                     <input id="notes" type="text" class="form-control">
                   </div>
+                  <div class="form-group">
+                    <label>Points:</label>
+                    <input type="number" class="form-control" value="1">
+                  </div>
                 </div>
               </div>
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTask()">Submit</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
-
             </div>
+
           </div>
         </div>
       </div>
@@ -149,7 +154,7 @@
               <h5 class="mb-1">Feed Scout</h5>
               <small>3 hours ago</small> 
             </div>
-            <p class="mb-1">Scout needs to be fed food from the orange bag</p>
+            <p class="mb-1">Scout needs to be fed one scoop from the orange bag.</p>
           </div>
           <div class="completed">Completed</div>
         </a> 
@@ -159,6 +164,7 @@
               <h5 class="mb-1">Brush Scout</h5>
               <small>5 hours ago</small> 
             </div>
+            <p class="mb-1">Scout has a pageant to prepare for this weekend!</p>
           </div>
           <div class="completed">Completed</div>
         </a> 
@@ -173,6 +179,7 @@
           <div class="completed">Completed</div>
         </a> 
       </div>
+
     </div>
   </div>
 
