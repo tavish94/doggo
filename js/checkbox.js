@@ -31,6 +31,9 @@ Util.events(document, {
         else if (taskClasses.indexOf("completed") >= 0) {
             clickedCompleted(task);
         }
+        else {
+            resetCompleted();
+        }
     },
 
 });
@@ -78,10 +81,20 @@ function createTask() {
     document.getElementById("toDoList").appendChild(card);
 }
 
+
 function clickedCompleted(task) {
     var taskCard = task.parentNode;
     taskCard.parentNode.removeChild(taskCard);
     resetCompleted();
+    moveCompletedTask(task.parentNode);
+}
+
+function moveCompletedTask(task) {
+    var clone = task.cloneNode(true);
+    var elements = clone.getElementsByClassName("completed");
+    clone.removeChild(elements[0]); 
+    clone.style.setProperty("background-color", "#f7f7f7");
+    document.getElementById("completedList").appendChild(clone);
 }
 
 function resetCompleted() {
