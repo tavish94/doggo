@@ -111,12 +111,6 @@ small {
 	right: 10px;
 }
 
-.fed {
-	/*background-color: #f239df;*/
-	/*filter: hue-rotate(180deg);*/
-}
-
-
 .logo {
 	color: #fff;
 	font-weight: bold;
@@ -238,6 +232,9 @@ small {
 .card-header {
 	display: flex;
 	position: relative;
+}
+.card-header:hover {
+	background-color: #d2eef2;
 }
 
 .card-body {
