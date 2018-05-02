@@ -25,10 +25,10 @@ header {
 	margin-bottom: 20px;
 }
 
-small {
+/*small {
 	position: absolute;
 	right: 0;
-}
+}*/
 
 .prof_img {
 	border-radius: 50%;
@@ -38,11 +38,11 @@ small {
 	display: flex;
 	position: relative;
 }
-.task-wrap {
+/*.task-wrap {
 	display: inline-block;
-	position: relative;
+	align-self: right;
 	width: 80%;
-}
+}*/
 .hide {
     display: none;
 }

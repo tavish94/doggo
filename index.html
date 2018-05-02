@@ -147,26 +147,35 @@
         </div>
       </div>
 
+
+<!--
+      <div class="list-group" id="list1">
+          <a href="#" class="list-group-item active">List 1 <input title="toggle all" type="checkbox" class="all pull-right"></a>
+          </div>
+        </div> -->
+
       <div class="list-group" id="toDoList">
-        <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
+
+        <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start bg-danger text-white">
+          <div class="task-wrap">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Brush Scout (OVERDUE)</h5>
+              <small>30 Minutes Late!</small>
+            </div>
+            <p class="mb-1">Scout has a pageant to prepare for this weekend!<input title="toggle all" type="checkbox" class="all pull-right" style="-webkit-transform: scale(1.7);"></p>
+          </div>
+
+      <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
           <div class="task-wrap" id="scout">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">Feed Scout</h5>
               <small>3 hours ago</small>
             </div>
-            <p class="mb-1">Scout needs to be fed one scoop from the orange bag.</p>
+            <p class="mb-1">Scout needs to be fed one scoop from the orange bag. <input title="toggle all" type="checkbox" class="all pull-right" style="-webkit-transform: scale(1.7);"></p>
           </div>
-          <div class="completed">Completed</div>
-        </a>
-        <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
-          <div class="task-wrap">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Brush Scout</h5>
-              <small>5 hours ago</small>
-            </div>
-            <p class="mb-1">Scout has a pageant to prepare for this weekend!</p>
-          </div>
-          <div class="completed">Completed</div>
+          </a>
+
+
         </a>
         <a href="#" class="new-task list-group-item list-group-item-action flex-column align-items-start">
           <div class="task-wrap">
@@ -174,9 +183,8 @@
               <h5 class="mb-1">Buy a New Bow</h5>
               <small>1 day ago</small>
             </div>
-            <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!</p>
+            <p class="mb-1">Scout needs a new bow for her collar. Personally I like pink!<input title="toggle all" type="checkbox" class="all pull-right" style="-webkit-transform: scale(1.7);"></p>
           </div>
-          <div class="completed">Completed</div>
         </a>
       </div>
 
@@ -320,9 +328,9 @@
 					<h4>Health</h4>
 				</div>
 			  <ul class="list-group list-group-flush">
-				<li class="list-group-item">Vet Visit 03/24/18</li>
-				<li class="list-group-item">Heartworm Medication 04/01/18</li>
-				<li class="list-group-item">Groomer's Appointment 04/05/18</li>
+				<li class="list-group-item disabled">Vet Visit 04/24/18</li>
+				<li class="list-group-item">Heartworm Medication 06/01/18</li>
+				<li class="list-group-item">Groomer's Appointment 8/05/18</li>
 			  </ul>
 			</div>
 	</div>
