@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 :root {
-	--heading-color: #6DC7D0;}
+	--heading-color: #6DC7D0;
+	--shade-color: #D2EEF2;
+}
 
 /* Body */
 body {
@@ -51,7 +53,7 @@ header {
 }
 .completed {
 	color: white;
-	background-color: #6DC7D0;
+	background-color: var(--heading-color);
 	text-align: center;
 	padding: 5px 10px;
 	position: absolute;
@@ -190,6 +192,22 @@ header {
 
 .graph_image {
 	margin: auto;
+}
+
+.btn-group{
+	display: flex !important;
+	position: relative !important;
+	border-color: var(--heading-color);
+	justify-content: center;
+	padding: 20px !important;
+}
+.walk-btn {
+	background-color: var(--heading-color) !important;
+	border-color: var(--shade-color) !important;
+}
+.walk-btn:hover {
+	background-color: var(--shade-color) !important;
+	border-color: var(--shade-color) !important;
 }
 
 .gallery .thumbnail h4 {
