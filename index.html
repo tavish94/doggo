@@ -184,7 +184,7 @@
     </div>
   </div>
 
-	<div class="col-md-3">
+	<div class="col-lg-3">
     	<!-- WALKS CARD -->
 		<div class="thumbnail not-todo" id="userdiv" data-toggle="modal" data-target="#dataModal">
   		<div class="card-header">
@@ -244,60 +244,56 @@
       </div>
   		</div>
       <div class="card-body jobs">
-        <!-- <img src="images/walks.png"  width="223px"/>  -->
         <div class="progress-bar" data-percent="75" id="walk-prog"></div>
-
         <script type="text/javascript">
           $(".progress-bar").loading();
         </script>
-
-        <h5 id="walk-deets">2 walks taken today</h5>
+        <h5 style="color:white">2 walks taken today</h5>
       </div>
 
     </div>
 
 		<!-- LEADERBOARD CARD -->
 		<div class="thumbnail not-todo" data-toggle="modal" data-target="#leaderModal">
-			  <div class="card-header">
-					<h4>Leaderboard</h4>
+		  <div class="card-header">
+				<h4>Leaderboard</h4>
+        <div class="modal fade" id="leaderModal" data-backdrop="false">
+          <div class="modal-dialog" style="width:80%; max-width: 1100px;">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h3>Leaderboard</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
 
-              <div class="modal fade" id="leaderModal" data-backdrop="false">
-                <div class="modal-dialog" style="width:80%; max-width: 1100px;">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                          <h3>Leaderboard</h3>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-
-                          <div class="card">
-                            <div class="card-header">
-                              <h4>Miles Walked This Week</h4>
-                            </div>
-                            <img src="images/family_walks.png" class="graph_img"/>
-                          </div>
-
-                          <div class="card">
-                            <div class="card-header">
-                              <h4>Percentage of Tasks Completed</h4>
-                            </div>
-                            <img src="images/tasks.png" class="graph_img"/>
-                          </div>
-
-                        </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Miles Walked This Week</h4>
+                      </div>
+                      <img src="images/family_walks.png" class="graph_img"/>
                     </div>
-                </div>
+
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Percentage of Tasks Completed</h4>
+                      </div>
+                      <img src="images/tasks.png" class="graph_img"/>
+                    </div>
+
+                  </div>
+              </div>
           </div>
+        </div>
+			</div>
 
-
-				</div>
-			  <ul class="list-group list-group-flush">
+		  <ul class="list-group list-group-flush">
 				<li class="list-group-item">Tavish <span class="badge badge-primary badge-pill">14</span></li>
 				<li class="list-group-item">Anna<span class="badge badge-primary badge-pill">10</span></li>
 				<li class="list-group-item">Helen<span class="badge badge-primary badge-pill">7</span></li>
 				<li class="list-group-item">Nikki<span class="badge badge-primary badge-pill">0</span></li>
-			  </ul>
+		  </ul>
 		</div>
+
 	</div>
 
 	<div class="col-lg-3">
