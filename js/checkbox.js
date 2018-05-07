@@ -26,12 +26,14 @@ var NUM_TASKS = 3;
 
 
 function newCreateTask() {
+    var dayCalendar = {0:"Sunday", 1:"Monday", 2:"Tuesday", 3:"Wednesday", 4:"Thursday", 5:"Friday", 6:"Saturday", 7:"Sunday"}
+    var timed = new Date(document.getElementById("selected-time").value);
+    var dayOfWeek = timed.getDay();
+
+
     var card = document.createElement("a");
     card.href = "#";
     card.className = "new-task list-group-item list-group-item-action flex-column align-items-start new";
-
-    var taskWrap = document.createElement("div");
-    taskWrap.className = "task-wrap";
 
     var div = document.createElement("div");
     div.className = "d-flex w-100 justify-content-between";
@@ -45,7 +47,7 @@ function newCreateTask() {
     h5.innerHTML = eventSelected;
 
     var small = document.createElement("small");
-    small.innerHTML = "just now";
+    small.innerHTML = "Due " + dayCalendar[dayOfWeek];
     small.style.setProperty("--position", "absolute");
     small.style.setProperty("--right", "0");
 
@@ -56,16 +58,14 @@ function newCreateTask() {
     var box = document.createElement("input");
     box.type = "checkbox";
     box.className = "all pull-right";
-    box.style = "-webkit-transform: scale(1.7);"
     NUM_TASKS += 1;
     box.id = "check" + NUM_TASKS;
 
     div.appendChild(h5);
     div.appendChild(small);
-    taskWrap.appendChild(div);
     p.append(box)
-    taskWrap.appendChild(p);
-    card.appendChild(taskWrap);
+    card.appendChild(div);
+    card.appendChild(p);
 
 
     document.getElementById("toDoList").appendChild(card);
