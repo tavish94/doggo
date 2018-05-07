@@ -84,21 +84,24 @@
                     <option>Nikki</option>
                   </select>
                 </form>
-                <label>For: </label>
+
                 <div class="form-group">
+                  <label>For: </label>
                   <div class="input-group date" id="datetimepicker1">
                     <input type="text" class="form-control" id="selected-time"/>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
                 </div>
+
                 <script type="text/javascript">
                   $(function () {
                     $('#datetimepicker1').datetimepicker();
                   });
                 </script>
-                <form class="form-group">
+
+                <div class="form-group">
                   <label>Repeat: </label>
-                  <div class="checkbox">
+                  <form class="form-group">
                     <label class="checkbox-inline"><input type="checkbox"> M</label>
                     <label class="checkbox-inline"><input type="checkbox"> T</label>
                     <label class="checkbox-inline"><input type="checkbox"> W</label>
@@ -106,8 +109,9 @@
                     <label class="checkbox-inline"><input type="checkbox"> F</label>
                     <label class="checkbox-inline"><input type="checkbox"> S</label>
                     <label class="checkbox-inline"><input type="checkbox"> U</label>
-                  </div>
-                </form>
+                  </form>
+                </div>
+
                 <div class="form-group">
                   <label for="sel1">Reminder:</label>
                   <form class="form-inline">
@@ -125,14 +129,16 @@
                       <option>days</option>
                     </select>
                   </form>
-                  <div class="form-group">
-                    <label for="usr">Notes:</label>
-                    <input id="notes" type="text" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label>Points:</label>
-                    <input type="number" class="form-control" value="1">
-                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="usr">Notes:</label>
+                  <input id="notes" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Points:</label>
+                  <input type="number" class="form-control" value="1">
                 </div>
               </div>
 
