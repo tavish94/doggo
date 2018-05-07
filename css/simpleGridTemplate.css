@@ -72,7 +72,11 @@ input[type='checkbox'] {
 }
 
 #feeding {
-	margin-left: 10px;
+	display: inline;
+	text-align: center;
+}
+
+#feeding2 {
 	display: inline;
 	text-align: center;
 }
