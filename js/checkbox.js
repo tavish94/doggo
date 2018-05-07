@@ -13,10 +13,16 @@ Util.events(document, {
     },
 
     "click": function(evt) {
+        // console.log(evt)
         var x = evt.clientX;
         var y = evt.clientY;
         var task = document.elementsFromPoint(x, y);
-        // console.log(task)
+        // console.log(task[0].classList);
+        // console.log(task[0].classList.contains("all"))
+        if (task[0].classList.contains("all")) {
+            newClickedCompleted(task[0]);
+        }
+
         for (var i = 0; i < task.length; i++) { 
             var classNames = task[i].className.split(" ")
             if (classNames.indexOf("completed") >= 0) {
@@ -34,10 +40,8 @@ Util.events(document, {
                 clickedCompleted(task);
             }
             else if (taskClasses.indexOf("new-task") >= 0) {
-                console.log("hre")
                 var completed = task.getElementsByClassName("completed")[0];
                 var completedClasses = completed.className.split(" ");
-
                 if (completedClasses.indexOf("hide") >= 0) {
                     resetCompleted();
                     completed.classList.remove("hide");
@@ -98,7 +102,7 @@ function createTask() {
     taskWrap.appendChild(p);
     card.appendChild(taskWrap);
     card.appendChild(completed);
-    console.log(card);
+    // console.log(card);
     document.getElementById("toDoList").appendChild(card);
 }
 
@@ -110,12 +114,34 @@ function clickedCompleted(task) {
     moveCompletedTask(task.parentNode);
 }
 
+function newClickedCompleted(task) {
+    var taskCard = task.parentNode;
+    if (document.getElementById("check").checked) {
+        taskCard.parentNode.parentNode.parentNode.removeChild(taskCard.parentNode.parentNode);
+        // resetCompleted();
+        document.getElementById("completedList").appendChild(taskCard.parentNode.parentNode);
+        moveCompletedTask(task.parentNode.parentNode);
+        taskCard.parentNode.parentNode.classList.remove("bg-danger");
+        taskCard.parentNode.parentNode.classList.remove("text-white");
+    }
+    else {
+        undoMove(task);
+        moveCompletedTask(task.parentNode.parentNode);
+    }
+    
+}
+
+function undoMove(task) {
+    var taskdiv = task.parentNode.parentNode.parentNode;
+    taskdiv.parentNode.removeChild(taskdiv);
+    document.getElementById('toDoList').appendChild(taskdiv);
+    taskdiv.style.setProperty("background-color", "white");
+}
+
 function moveCompletedTask(task) {
     var clone = task.cloneNode(true);
     var elements = clone.getElementsByClassName("completed");
-    clone.removeChild(elements[0]); 
-    clone.style.setProperty("background-color", "#f7f7f7");
-    document.getElementById("completedList").appendChild(clone);
+    task.parentNode.style.setProperty("background-color", "#f7f7f7");
 }
 
 function resetCompleted() {
