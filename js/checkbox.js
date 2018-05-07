@@ -99,6 +99,10 @@ function newClickedCompleted(task) {
 }
 
 function undoMove(task) {
+    if (task.id == "check") {
+        task.parentNode.parentNode.parentNode.classList.add("bg-danger")
+        task.parentNode.parentNode.parentNode.classList.add("text-white")
+    }
     var taskdiv = task.parentNode.parentNode.parentNode;
     taskdiv.parentNode.removeChild(taskdiv);
     document.getElementById('toDoList').appendChild(taskdiv);
