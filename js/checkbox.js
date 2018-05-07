@@ -23,17 +23,17 @@ Util.events(document, {
             newClickedCompleted(task[0]);
         }
 
-        for (var i = 0; i < task.length; i++) { 
-            var classNames = task[i].className.split(" ")
-            if (classNames.indexOf("completed") >= 0) {
-                task = task[i];
-                break;
-            }
-            else if (classNames.indexOf("new-task") >= 0) {
-                task = task[i];
-                break;
-            }
-        }
+        // for (var i = 0; i < task.length; i++) { 
+        //     var classNames = task[i].className.split(" ")
+        //     if (classNames.indexOf("completed") >= 0) {
+        //         task = task[i];
+        //         break;
+        //     }
+        //     else if (classNames.indexOf("new-task") >= 0) {
+        //         task = task[i];
+        //         break;
+        //     }
+        // }
         try {
             var taskClasses = task.className.split(" ");
             if (taskClasses.indexOf("completed") >= 0) {
@@ -53,7 +53,7 @@ Util.events(document, {
                 }
             }
             else {
-                resetCompleted();
+                // resetCompleted();
             }
         }
         catch(err) {
@@ -114,11 +114,14 @@ function clickedCompleted(task) {
     moveCompletedTask(task.parentNode);
 }
 
+// Problem: need to click the top box first, then others work, 
+// otherwise they just go to bottom of existing list
+
+
 function newClickedCompleted(task) {
     var taskCard = task.parentNode;
-    if (document.getElementById("check").checked) {
+    if (document.getElementById(task.id).checked) {
         taskCard.parentNode.parentNode.parentNode.removeChild(taskCard.parentNode.parentNode);
-        // resetCompleted();
         document.getElementById("completedList").appendChild(taskCard.parentNode.parentNode);
         moveCompletedTask(task.parentNode.parentNode);
         taskCard.parentNode.parentNode.classList.remove("bg-danger");
