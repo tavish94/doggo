@@ -80,35 +80,37 @@ function clickedCompleted(task) {
     moveCompletedTask(task.parentNode);
 }
 
-
-
 function newClickedCompleted(task) {
     var taskCard = task.parentNode;
     if (document.getElementById(task.id).checked) {
         taskCard.parentNode.parentNode.parentNode.removeChild(taskCard.parentNode.parentNode);
         document.getElementById("completedList").appendChild(taskCard.parentNode.parentNode);
-        moveCompletedTask(task.parentNode.parentNode);
+        moveCompletedTask(task.parentNode.parentNode, true);
         taskCard.parentNode.parentNode.classList.remove("bg-danger");
         taskCard.parentNode.parentNode.classList.remove("text-white");
     }
     else {
         undoMove(task);
-        moveCompletedTask(task.parentNode.parentNode);
-    }
-    
+        moveCompletedTask(task.parentNode.parentNode, false);
+    }  
 }
 
 function undoMove(task) {
     var taskdiv = task.parentNode.parentNode.parentNode;
     taskdiv.parentNode.removeChild(taskdiv);
     document.getElementById('toDoList').appendChild(taskdiv);
-    taskdiv.style.setProperty("background-color", "white");
+
 }
 
-function moveCompletedTask(task) {
+function moveCompletedTask(task, shade) {
     var clone = task.cloneNode(true);
     var elements = clone.getElementsByClassName("completed");
-    task.parentNode.style.setProperty("background-color", "#f7f7f7");
+    if (shade) {
+        task.parentNode.style.setProperty("background-color", "#f7f7f7");
+    }
+    else {
+        task.parentNode.style.setProperty("background-color", "white");
+    }
 }
 
 function resetCompleted() {
