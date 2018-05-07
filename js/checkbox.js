@@ -1,72 +1,34 @@
 Util.events(document, {
     "DOMContentLoaded": function() {
         var tasks = document.getElementsByClassName("completed");
-        // console.log(tasks)
         for (var i = 0; i < tasks.length; i++) { 
             var currTask = tasks[i];
             currTask.classList.add("hide");
         }
-
         $(".new-task").click(function(evt) {
-
         })
     },
+
 
     "click": function(evt) {
         // console.log(evt)
         var x = evt.clientX;
         var y = evt.clientY;
         var task = document.elementsFromPoint(x, y);
-        // console.log(task[0].classList);
-        // console.log(task[0].classList.contains("all"))
         if (task[0].classList.contains("all")) {
             newClickedCompleted(task[0]);
-        }
-
-        // for (var i = 0; i < task.length; i++) { 
-        //     var classNames = task[i].className.split(" ")
-        //     if (classNames.indexOf("completed") >= 0) {
-        //         task = task[i];
-        //         break;
-        //     }
-        //     else if (classNames.indexOf("new-task") >= 0) {
-        //         task = task[i];
-        //         break;
-        //     }
-        // }
-        try {
-            var taskClasses = task.className.split(" ");
-            if (taskClasses.indexOf("completed") >= 0) {
-                clickedCompleted(task);
-            }
-            else if (taskClasses.indexOf("new-task") >= 0) {
-                var completed = task.getElementsByClassName("completed")[0];
-                var completedClasses = completed.className.split(" ");
-                if (completedClasses.indexOf("hide") >= 0) {
-                    resetCompleted();
-                    completed.classList.remove("hide");
-                    completed.classList.add("show");
-                } 
-                else {
-                    completed.classList.remove("show");
-                    completed.classList.add("hide");
-                }
-            }
-            else {
-                // resetCompleted();
-            }
-        }
-        catch(err) {
-            console.log("Error occurred: ", err)
         }
     },
 
 });
 
-function createTask() {
+var NUM_TASKS = 3;
+
+
+function newCreateTask() {
     var card = document.createElement("a");
     card.href = "#";
-    card.className = "new-task list-group-item list-group-item-action flex-column align-items-start";
+    card.className = "new-task list-group-item list-group-item-action flex-column align-items-start new";
 
     var taskWrap = document.createElement("div");
     taskWrap.className = "task-wrap";
@@ -91,19 +53,23 @@ function createTask() {
     p.className = "mb-1";
     p.innerHTML = document.getElementById("notes").value;
 
-
-    var completed = document.createElement("div");
-    completed.className = "completed hide";
-    completed.innerHTML = "Completed"
+    var box = document.createElement("input");
+    box.type = "checkbox";
+    box.className = "all pull-right";
+    box.style = "-webkit-transform: scale(1.7);"
+    NUM_TASKS += 1;
+    box.id = "check" + NUM_TASKS;
 
     div.appendChild(h5);
     div.appendChild(small);
     taskWrap.appendChild(div);
+    p.append(box)
     taskWrap.appendChild(p);
     card.appendChild(taskWrap);
-    card.appendChild(completed);
-    // console.log(card);
+
+
     document.getElementById("toDoList").appendChild(card);
+
 }
 
 
@@ -114,8 +80,6 @@ function clickedCompleted(task) {
     moveCompletedTask(task.parentNode);
 }
 
-// Problem: need to click the top box first, then others work, 
-// otherwise they just go to bottom of existing list
 
 
 function newClickedCompleted(task) {
