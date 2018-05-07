@@ -90,7 +90,6 @@ input[type='checkbox'] {
 
 #modal-walk-prog {
 	display: inline-flex;
-	/*margin-left: -75px;*/
 }
 
 #modal-walk-deets {
@@ -187,10 +186,6 @@ input[type='checkbox'] {
 }
 
 .progress_img {
-	margin: auto;
-}
-
-.graph_image {
 	margin: auto;
 }
 
@@ -297,10 +292,10 @@ input[type='checkbox'] {
 }
 
 .graph_img {
-	width: 95%;
+	width: 65%;
 	height: auto;
 	margin: auto;
-
+	padding: 10px;
 }
 
 .pinned {
