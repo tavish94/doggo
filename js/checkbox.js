@@ -5,13 +5,24 @@ Util.events(document, {
             var currTask = tasks[i];
             currTask.classList.add("hide");
         }
-        $(".new-task").click(function(evt) {
-        })
+
+        $(function () {
+          $(".task-wrap").dblclick(function (e) {
+              e.stopPropagation();
+              var task = $(this)[0];
+              var notes = task.children[1];
+              var notes = task.children[1].innerHTML;
+              notes = notes.split("<input")
+
+              var editModal = $("#editModal")
+              $("#edit-notes")[0].value = notes[0];
+              editModal.modal('toggle');
+          });
+        });   
     },
 
 
     "click": function(evt) {
-        // console.log(evt)
         var x = evt.clientX;
         var y = evt.clientY;
         var task = document.elementsFromPoint(x, y);
