@@ -48,7 +48,12 @@ function newCreateTask() {
     h5.innerHTML = eventSelected;
 
     var small = document.createElement("small");
-    small.innerHTML = "Due " + dayCalendar[dayOfWeek];
+    if (dayCalendar[dayOfWeek] != undefined) {
+        small.innerHTML = "Due " + dayCalendar[dayOfWeek];
+    }
+    else {
+        small.innerHTML = "Just Now";
+    }
     small.style.setProperty("--position", "absolute");
     small.style.setProperty("--right", "0");
 
@@ -68,8 +73,6 @@ function newCreateTask() {
     p.append(box)
     taskWrap.appendChild(p);
     card.appendChild(taskWrap);
-
-
 
     document.getElementById("toDoList").appendChild(card);
 

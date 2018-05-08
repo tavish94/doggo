@@ -100,7 +100,14 @@ input[type='checkbox'] {
 	margin: auto;
 	font-size:30px;
 	color: #717070;
+}
 
+.scout {
+	display: inline-flex;
+	position: relative;
+	justify-content: center;
+	width: 100%;
+	padding-top: 100%;
 }
 
 .header-buttons {
