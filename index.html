@@ -317,17 +317,50 @@
 		  </div>
 		</div>
 
-		<!-- HEALTH CARD -->
-		<div class="thumbnail not-todo">
-			  <div class="card-header">
-					<h4>Health</h4>
-				</div>
-			  <ul class="list-group list-group-flush">
-				<li class="list-group-item disabled">Vet Visit 04/24/18</li>
-				<li class="list-group-item">Heartworm Medication 06/01/18</li>
-				<li class="list-group-item">Groomer's Appointment 8/05/18</li>
-			  </ul>
-			</div>
+    <!-- HEALTH CARD -->
+    <div class="thumbnail not-todo" data-toggle="modal" data-target="#healthModal">
+      <div class="card-header">
+        <h4>Health</h4>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item disabled">Vet Visit 04/24/18</li>
+        <li class="list-group-item">Heartworm Medication 06/01/18</li>
+        <li class="list-group-item">Groomer's Appointment 8/05/18</li>
+      </ul>
+
+      <div class="modal fade" id="healthModal" data-backdrop="false">
+        <div class="modal-dialog" style="width:80%; max-width: 1100px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Health</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+
+            <div class="modal-body">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Upcoming Appointments</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Heartworm Medication 06/01/18</li>
+                  <li class="list-group-item">Groomer's Appointment 8/05/18</li>
+                </ul>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <h4>Appointments in the last Month</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item disabled">Vet Visit 04/24/18</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 	</div>
   </div>
 
