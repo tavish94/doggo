@@ -286,6 +286,13 @@ input[type='checkbox'] {
 	background-image: url("../images/profile.png");
 	right: 60px;
 }
+#gallery-browse{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	height: 200px;
+	border: none;
+}
 
 .column {
 	width: 50%;

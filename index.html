@@ -193,6 +193,28 @@
     <div class="thumbnail scout">
       <div class="card-header">
         <h4>Photo Gallery</h4>
+        <div class="header-buttons">
+          <button class="add button_not_bs" data-toggle="modal" data-target="#galleryModal">+</button>
+        </div>
+        <!-- Modal -->
+        <div id="galleryModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title">Add Picture</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <label class="btn btn-default" id="gallery-browse">Browse<input type="file" hidden></label>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"">Upload</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
       <div id="scout-gallery" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -232,51 +254,55 @@
 		<div class="thumbnail not-todo" data-toggle="modal" data-target="#walksModal">
   		<div class="card-header">
   			<h4>Walks</h4>
-          <div class="modal fade" id="walksModal" data-backdrop="false">
-            <div class="modal-dialog" style="width:80%; max-width: 1100px;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                      <h3>Walking History</h3>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="card">
-                        <div class="card-header">
-                          <h4>Daily Walk Total</h4>
-                        </div>
-                        <img src="images/walk_day.png" id="walk-pic" class="graph_img" alt="could not load image">
-<!--                         <div class="btn-group">
-                          <button type="button" class="btn btn-primary walk-btn" onclick="document.getElementById('walk-pic').src='images/walk_day.png'">Day</button>
-                          <button type="button" class="btn btn-primary walk-btn" onclick="document.getElementById('walk-pic').src='images/walk_week.png'">Week</button>
-                          <button type="button" class="btn btn-primary walk-btn" onclick="changePicture('month')">Month</button>
-                        </div> -->
-                       </div>
+        <div class="modal fade" id="walksModal" data-backdrop="false">
+          <div class="modal-dialog" style="width:80%; max-width: 1100px;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Walking History</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
 
-                       <div class="card">
-                          <div class="card-header">
-                            <h4>Walks This Week</h4>
-                          </div>
-                          <img src="images/walk_week.png" class="graph_img" alt="could not load image">
-                        </div>
-
-                        <div class="card">
-                          <div class="card-header">
-                            <h4>Walks This Month</h4>
-                          </div>
-                          <img src="images/walk_month.png" class="graph_img" alt="could not load image sorry">
-                        </div>
-
-                        <div class="card">
-                          <div class="card-header">
-                            <h4>Family Member Leaderboard</h4>
-                          </div>
-                          <img src="images/family_walks.png" class="graph_img"/>
-                        </div>
-
-                    </div>
+              <div class="modal-body">
+<!--                 <div class="card">
+                  <div class="card-header">
+                    <h4>Today</h4>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Nikki <span><br>2 miles</br></span></li>
+                    <li class="list-group-item">Anna <span><br>1 mile</br></span></li>
+                  </ul>
+                </div> -->
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Hourly Breakdown</h4>
+                  </div>
+                  <img src="images/walk_day.png" id="walk-pic" class="graph_img" alt="could not load image">
                 </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Weekly Breakdown</h4>
+                  </div>
+                  <img src="images/walk_week.png" class="graph_img" alt="could not load image">
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Monthly Breakdown</h4>
+                  </div>
+                  <img src="images/walk_month.png" class="graph_img" alt="could not load image sorry">
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Family Member Leaderboard</h4>
+                  </div>
+                  <img src="images/family_walks.png" class="graph_img"/>
+                </div>
+              </div>
             </div>
-      </div>
+          </div>
+        </div>
   		</div>
       <div class="card-body jobs">
         <div class="progress-bar" data-percent="75" id="walk-prog"></div>
