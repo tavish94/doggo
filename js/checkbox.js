@@ -4,23 +4,8 @@ Util.events(document, {
         for (var i = 0; i < tasks.length; i++) { 
             var currTask = tasks[i];
             currTask.classList.add("hide");
-        }
-
-        $(function () {
-          $(".task-wrap").dblclick(function (e) {
-              e.stopPropagation();
-              var task = $(this)[0];
-              var notes = task.children[1];
-              var notes = task.children[1].innerHTML;
-              notes = notes.split("<input")
-
-              var editModal = $("#editModal")
-              $("#edit-notes")[0].value = notes[0];
-              editModal.modal('toggle');
-          });
-        });   
+        } 
     },
-
 
     "click": function(evt) {
         var x = evt.clientX;
@@ -28,6 +13,29 @@ Util.events(document, {
         var task = document.elementsFromPoint(x, y);
         if (task[0].classList.contains("all")) {
             newClickedCompleted(task[0]);
+        }
+    },
+
+    "dblclick": function(evt) {
+        var eventPath = evt.path;
+        for (var i=0; i<eventPath.length; i++) {
+            try {
+                var task = eventPath[i];
+                var taskClass = eventPath[i].classList;
+                console.log(eventPath[i].classList)
+                if (taskClass.contains("task-wrap")) {
+                    console.log(task.children)
+                    // var task = $(this)[0];
+                    var notes = task.children[1];
+                    var notes = task.children[1].innerHTML;
+                    notes = notes.split("<input")
+
+                    var editModal = $("#editModal")
+                    $("#edit-notes")[0].value = notes[0];
+                    editModal.modal('toggle');
+                }
+            }
+            catch(err) {}
         }
     },
 
@@ -40,12 +48,15 @@ function newCreateTask() {
     var timed = new Date(document.getElementById("selected-time").value);
     var dayOfWeek = timed.getDay();
 
+    NUM_TASKS += 1;
+
     var card = document.createElement("a");
     card.href = "#";
     card.className = "new-task list-group-item list-group-item-action flex-column align-items-start new";
 
     var taskWrap = document.createElement("div");
     taskWrap.className = "task-wrap";
+    taskWrap.id = "task-" + NUM_TASKS;
 
     var div = document.createElement("div");
     div.className = "d-flex w-100 justify-content-between";
@@ -75,7 +86,6 @@ function newCreateTask() {
     var box = document.createElement("input");
     box.type = "checkbox";
     box.className = "all pull-right";
-    NUM_TASKS += 1;
     box.id = "check" + NUM_TASKS;
 
     div.appendChild(h5);
@@ -86,7 +96,6 @@ function newCreateTask() {
     card.appendChild(taskWrap);
 
     document.getElementById("toDoList").appendChild(card);
-
 }
 
 
